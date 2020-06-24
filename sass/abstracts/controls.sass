@@ -1,0 +1,54 @@
+$control-radius:                    $border-radius !default
+$control-radius-small:              $border-radius-sm !default
+
+$control-border-width:              $border-width !default
+
+$control-height:                    2.5em !default
+$control-line-height:               1.5 !default
+
+$control-padding-y:                 calc(0.5em - #{$control-border-width}) !default
+$control-padding-x:                 calc(0.75em - #{$control-border-width}) !default
+
+$control-font-size-sm:              $font-size-sm
+$control-font-size-md:              $font-size-md
+$control-font-size-lg:              $font-size-lg
+
+=control
+  -moz-appearance: none
+  -webkit-appearance: none
+  align-items: center
+  border: $control-border-width solid transparent
+  border-radius: $control-radius
+  box-shadow: none
+  display: inline-flex
+  font-size: $font-size-md
+  //height: $control-height
+  justify-content: flex-start
+  line-height: $control-line-height
+  padding-bottom: $control-padding-y
+  padding-left: $control-padding-x
+  padding-right: $control-padding-x
+  padding-top: $control-padding-y
+  position: relative
+  vertical-align: top
+  // States
+  &:focus,
+  &.focused,
+  &:active,
+  &.active
+    outline: none
+  &[disabled],
+  fieldset[disabled] &
+    cursor: not-allowed
+
+%control
+  +control
+
+// The controls sizes use mixins so they can be used at different breakpoints
+=control-small
+  border-radius: $control-radius-small
+  font-size: $control-font-size-sm
+=control-medium
+  font-size: $control-font-size-md
+=control-large
+  font-size: $control-font-size-lg

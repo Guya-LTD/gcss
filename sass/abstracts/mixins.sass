@@ -1,0 +1,24 @@
+// Placeholders
+=unselectable
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+%unselectable
+  +unselectable
+
+// Shared Inputs
+=input
+  @extend %control
+
+=input-small
+  +control-small
+
+=input-large
+  +control-large
+
+
+%input
+  +input
