@@ -1,3 +1,14 @@
+/// Map deep get
+/// @author Hugo Giraudel
+/// @access public
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Key chain
+/// @return {*} - Desired value
+@function map-deep-get($map, $keys...)
+    @each $key in $keys
+        $map: map-get($map, $key)
+    @return $map
+  
 /// Themify mixin
 /// @access private
 /// @author Hugo Giraudel
@@ -8,13 +19,21 @@
   // Iterate over the themes
   @each $theme, $colors in $themes 
     // Create a selector (e.g. `.media.theme-unicorn, .theme-unicorn .media`)
-    &.theme-#$theme,
-    .theme-#$theme & 
+    &.theme-#{$theme},
+    .theme-#{$theme} & 
       // Output the declaration
-      #$property: map-get($colors, $key)
+      #{$property}: map-deep-get($colors, $key, $property)
     
   
 
+
+
+
+/// Shorthand to themify color through `themify` mixin
+/// @access public
+/// @see mixin themify
+@mixin font-family($arguments...) 
+  @include themify('font-family', $arguments...)
 
 
 /// Shorthand to themify color through `themify` mixin
@@ -27,12 +46,12 @@
 /// Shorthand to themify border-color through `themify` mixin
 /// @access public
 /// @see mixin themify
-@mixin border-color($arguments...) 
-  @include themify('border-color', $arguments...)
+@mixin border($arguments...) 
+  @include themify('border', $arguments...)
 
 
 /// Shorthand to themify background-color through `themify` mixin
 /// @access public
 /// @see mixin themify
-@mixin background-color($arguments...) 
-  @include themify('background-color', $arguments...)
+@mixin background($arguments...) 
+  @include themify('background', $arguments...)
