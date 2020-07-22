@@ -1,0 +1,184 @@
+// NAVBAR ELEMENT
+  
+//
+// VARIABLES
+//
+$navbar-height-sm:                  54px !default
+$navbar-height:                     3.25rem !default
+
+$navbar-background-color:           $skin-default-background-color
+
+$navbar-border-color:               $skin-default-border-color
+$navbar-border-width:               $border-width
+
+$navbar-padding-vertical:           0 !default
+$navbar-padding-horizontal:         8em !default
+
+$navbar-menu-width:                 70% !default
+
+$navbar-menu-border-color:          $skin-default-border-color
+$navbar-menu-border-width:          $border-width
+$navbar-menu-border-radius:         $border-radius
+$navbar-menu-border-style:          solid !default
+
+$navbar-menu-border-shadow:         $skin-default-box-shadow
+
+$navbar-menu-background-color:      $skin-default-background-color
+
+$navbar-menu-margin-vertical:       6px !default
+$navbar-menu-margin-horizontal:     20px !default
+
+// 
+// SPECFIC MIXINS
+//
+// The sizes use mixins so they can be used at different breakpoints
+=nabar-small
+  height: $navbar-height-sm
+
+
+// 
+#navbar-open
+  display: none
+  float: left
+
+  @include screen-sm
+    display: inline-block
+
+//
+#navbar-close
+  display: none
+  position: absolute
+
+  @include screen-sm
+    position: absolute
+    display: none
+    width: calc($navbar-menu-width + 2%)
+
+//
+// BLOCKS
+//
+.navbar
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  z-index: 1
+  min-height: $navbar-height-sm
+  background: $navbar-background-color
+  border-bottom: $navbar-border-width solid $navbar-border-color
+  padding: $navbar-padding-vertical $navbar-padding-horizontal
+
+  //
+  // ELEMENTS
+  //
+
+  // Brand Element
+  &__brand
+    display: inline-block
+    float: left
+
+    &__large > a > img
+      max-height: $navbar-height
+
+  // Menu Element
+  &__menu
+
+    // Common
+    &__left,
+    &__right
+      margin: 0
+      padding: 0
+      vertical-align: top 
+      display: inline-block
+      list-style-type: none
+      margin-top: $navbar-menu-margin-vertical
+      margin-left: $navbar-menu-margin-horizontal
+
+      & > li
+        display: inline-block
+        position: relative
+        float: left
+        margin: .8em 0em
+
+        &:hover
+          & > ul
+            display: block
+
+        // submenu
+        & > ul
+          display: none
+          float: none
+          position: absolute
+          padding: 0
+          margin: 0
+          padding: 15px
+          width: max-content
+          background: $navbar-menu-background-color
+          border-width: $navbar-menu-border-width
+          border-color: $navbar-menu-border-color
+          border-style: $navbar-menu-border-style
+          box-shadow: $navbar-menu-border-shadow
+
+          & > li
+            width: 100%
+            display: block
+
+    // Left Menu Element
+    &__left
+      float: left
+
+    // Right Menu Element
+    &__right
+      float: right
+
+
+  //
+  // MODIFIERS
+  //
+  
+  // Size Modifiers
+  &--sm
+    +nabar-small
+
+
+  //
+  // Media query
+  //
+
+  @include screen-sm
+    min-height: 100%
+    height: 100%
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    margin: 0
+    padding: 0
+    display: inline-block
+
+    // Menu Element
+    &__menu
+      margin: 0
+      position: absolute
+      display: none
+      width: $navbar-menu-width
+      min-height: 100%
+      background: $navbar-background-color
+      border-right: $navbar-border-width solid $navbar-border-color
+
+      // Common
+      &__left,
+      &__right
+        
+        & > li
+          display: block
+          width: 80%
+          padding-left: 8px
+
+      // Left Menu Element
+      &__left
+
+      // Right Menu Element
+      &__right
+
+      
