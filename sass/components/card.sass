@@ -1,0 +1,97 @@
+// CARDS
+
+//
+// VARIABLES
+//
+$card-width:                        280px !default
+
+$card-color:                        $text-color-light
+$card-background-color:             $color-neutral-white !default
+
+$card-subtitle-color:               $text-color-x-light
+
+$card-border-color:               	$skin-default-border-color
+$card-border-width:              	  $border-width
+$card-border-radius:              	$border-radius
+$card-border-style:                 solid !default
+
+$card-padding-vertical:             1em !default
+$card-padding-horizontal:           1em !default
+
+$card-box-shadow:                   0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02)
+
+//
+// BLOCKS
+//
+.card
+  flex-wrap: wrap
+  max-width: 100%
+  position: relative
+  word-wrap: break-word
+  flex-direction: column
+  width: $card-width
+  color: $card-color
+  background-color: $card-background-color
+  border-width: $card-border-width
+  border-color: $card-border-color
+  border-style: $card-border-style
+
+  //
+  // ELEMENTS
+  //
+  
+  // Top Image Element
+  &__image
+    & > img
+      max-width: $card-width
+    
+  &__header,
+  &__footer
+    padding: $card-padding-vertical $card-padding-horizontal
+    //display: contents
+
+  // Header Element
+  &__header
+    word-wrap: break-word
+
+    &__title,
+    &__subtitle
+      & > h1, h2, h3, h4, h5, h6
+        margin: 0
+
+    &__title
+      & > h1, h2, h3, h4, h5, h6
+        margin-bottom: .4rem
+
+    &__subtitle
+      color: $card-subtitle-color
+      margin-left: .2rem
+      font-weight: 600
+      & > h1, h2, h3, h4, h5, h6
+        margin-bottom: .5rem
+
+  // Body Element
+  &__body
+    margin-top: 1rem
+    margin-bottom: 1rem
+    padding: 0 $card-padding-horizontal
+
+    & .input
+      width: 100%
+
+  // Footer Element
+  &__footer
+
+  
+  //
+  // MODIFIERS
+  //
+
+  // Float Modifier
+  &--float
+    box-shadow: $card-box-shadow
+    transition: 0.3s
+
+  // Width Modifier
+  &--block
+    width: 100% !important
