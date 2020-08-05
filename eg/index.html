@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../dist/css/gcss.css">
+    </head>
+    <body>
+        <div class='sidebar theme-royal-blue'>
+            <div class='sidebar__menu'>
+                <div class='sidebar__menu__primary'>
+                    <div class='sidebar__menu__primary__logo'>
+                        <i>Logo</i>
+                    </div>
+                    <div class='sidebar__menu__primary__top'>
+                        <ul>
+                            <li><a href='#'>
+                                <svg role="img" height='15px' widht='15px' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>KaiOS icon</title><path d="M4.47 0a2.81 2.81 0 0 0-2.84 2.78v18.43A2.8 2.8 0 0 0 4.47 24a2.8 2.8 0 0 0 2.85-2.78V2.78A2.83 2.83 0 0 0 4.47 0zm9.4 8.54a2.8 2.8 0 0 0-3.89-.66 2.68 2.68 0 0 0-.68 3.8l8 11.15a2.81 2.81 0 0 0 3.88.66 2.68 2.68 0 0 0 .74-3.72l-.06-.09-7.98-11.14zm3.65-1.18a3.71 3.71 0 0 0 3.74-3.67A3.71 3.71 0 0 0 17.52.02a3.71 3.71 0 0 0-3.75 3.67 3.71 3.71 0 0 0 3.75 3.67z"/></svg>
+                                </a>
+                            </li>
+                            <li>Y</li>
+                        </ul>
+                    </div>
+                    <div class='sidebar__menu__primary__bottom'>
+                        <ul>
+                            <li>Z</li>
+                            <li>E</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='sidebar__menu__secondary'>
+                    <ul class='list list--nav'>             
+                        <li class='list__item list__collapse' onclick="toggleCollapseListItems(this)">
+                            <span class='list__collapse__faciliter'>
+                                <span class='list__collapse__faciliter__icon'>
+                                    <svg role="img" height='13px' widht='13px' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>KaiOS icon</title><path d="M4.47 0a2.81 2.81 0 0 0-2.84 2.78v18.43A2.8 2.8 0 0 0 4.47 24a2.8 2.8 0 0 0 2.85-2.78V2.78A2.83 2.83 0 0 0 4.47 0zm9.4 8.54a2.8 2.8 0 0 0-3.89-.66 2.68 2.68 0 0 0-.68 3.8l8 11.15a2.81 2.81 0 0 0 3.88.66 2.68 2.68 0 0 0 .74-3.72l-.06-.09-7.98-11.14zm3.65-1.18a3.71 3.71 0 0 0 3.74-3.67A3.71 3.71 0 0 0 17.52.02a3.71 3.71 0 0 0-3.75 3.67 3.71 3.71 0 0 0 3.75 3.67z"/></svg>
+                                </span>
+                                <span class='list__collapse__faciliter__text'>Catalogs</span>
+                                <span class='list__collapse__faciliter__icon list__collapse__faciliter__icon--open'>O</span>
+                                <span class='list__collapse__faciliter__icon list__collapse__faciliter__icon--close'>C</span>
+                            </span>
+                        </li>
+                        <ul class='list__collapse__itmes'>
+                            <li class='list__item'><svg role="img" height='13px' widht='13px' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>KaiOS icon</title><path d="M4.47 0a2.81 2.81 0 0 0-2.84 2.78v18.43A2.8 2.8 0 0 0 4.47 24a2.8 2.8 0 0 0 2.85-2.78V2.78A2.83 2.83 0 0 0 4.47 0zm9.4 8.54a2.8 2.8 0 0 0-3.89-.66 2.68 2.68 0 0 0-.68 3.8l8 11.15a2.81 2.81 0 0 0 3.88.66 2.68 2.68 0 0 0 .74-3.72l-.06-.09-7.98-11.14zm3.65-1.18a3.71 3.71 0 0 0 3.74-3.67A3.71 3.71 0 0 0 17.52.02a3.71 3.71 0 0 0-3.75 3.67 3.71 3.71 0 0 0 3.75 3.67z"/></svg>
+                                Apple</li>
+                            <li class='list__item'>Orange</li>
+                            <li class='list__item'>Banana</li>
+                        </ul>
+                        <li class='list__item'> <svg role="img" height='13px' widht='13px' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>KaiOS icon</title><path d="M4.47 0a2.81 2.81 0 0 0-2.84 2.78v18.43A2.8 2.8 0 0 0 4.47 24a2.8 2.8 0 0 0 2.85-2.78V2.78A2.83 2.83 0 0 0 4.47 0zm9.4 8.54a2.8 2.8 0 0 0-3.89-.66 2.68 2.68 0 0 0-.68 3.8l8 11.15a2.81 2.81 0 0 0 3.88.66 2.68 2.68 0 0 0 .74-3.72l-.06-.09-7.98-11.14zm3.65-1.18a3.71 3.71 0 0 0 3.74-3.67A3.71 3.71 0 0 0 17.52.02a3.71 3.71 0 0 0-3.75 3.67 3.71 3.71 0 0 0 3.75 3.67z"/></svg> Apple</li>
+                        <li class='list__item active'><svg role="img" height='13px' widht='13px' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>KaiOS icon</title><path d="M4.47 0a2.81 2.81 0 0 0-2.84 2.78v18.43A2.8 2.8 0 0 0 4.47 24a2.8 2.8 0 0 0 2.85-2.78V2.78A2.83 2.83 0 0 0 4.47 0zm9.4 8.54a2.8 2.8 0 0 0-3.89-.66 2.68 2.68 0 0 0-.68 3.8l8 11.15a2.81 2.81 0 0 0 3.88.66 2.68 2.68 0 0 0 .74-3.72l-.06-.09-7.98-11.14zm3.65-1.18a3.71 3.71 0 0 0 3.74-3.67A3.71 3.71 0 0 0 17.52.02a3.71 3.71 0 0 0-3.75 3.67 3.71 3.71 0 0 0 3.75 3.67z"/></svg> Orange</li>
+                        <li class='list__item'>Banana</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class='main main--has-sidebar'>
+            <div>
+                <button class='button'>Button</button>
+                <button class='theme-royal-blue button'>Button</button>
+                <button class='theme-royal-blue button button--primary'>Button</button>
+                <button class='theme-royal-blue button button--success'>Button</button>
+                <button class='theme-royal-blue button button--warning'>Button</button>
+                <button class='theme-royal-blue button button--danger'>Button</button>
+            </div>
+            <div>
+                <div class='notification'>
+                    <div class='notification__content'>
+                        <div class='notification__content__title'>Notification Title</div>
+                        <div class='notification__content__message'>Contained buttons are high-emphasis, distinguished by their use of elevation and fill. They contain actions that are primary to your app.</div>
+                    </div>
+                    <a class='notification__close'>X</a>
+                </div>
+                <div class='notification notification--descriptive'>
+                    <div class='notification__content'>
+                        <div class='notification__content__title'>Notification Title</div>
+                        <div class='notification__content__message'>Contained buttons are high-emphasis, distinguished by their use of elevation and fill. They contain actions that are primary to your app.</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ul class='list list--nav'>
+                    <li class='list__header'>Catalogs</li>
+                    <li class='list__item'>Apple</li>
+                    <li class='list__item'>Orange</li>
+                    <li class='list__item'>Banana</li>
+                </ul>
+                <ul class='list list--nav'>             
+                    <li class='list__item list__collapse' onclick="toggleCollapseListItems(this)">
+                        <span class='list__collapse__faciliter'>
+                            <span class='list__collapse__faciliter__text'>Catalogs</span>
+                            <span class='list__collapse__faciliter__icon list__collapse__faciliter__icon--open'>O</span>
+                            <span class='list__collapse__faciliter__icon list__collapse__faciliter__icon--close'>C</span>
+                        </span>
+                    </li>
+                    <ul class='list__collapse__itmes'>
+                        <li class='list__item'>Apple</li>
+                        <li class='list__item'>Orange</li>
+                        <li class='list__item'>Banana</li>
+                    </ul>
+                    <li class='list__item'>Apple</li>
+                    <li class='list__item active'>Orange</li>
+                    <li class='list__item'>Banana</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    <script src='../dist/js/gcss.js'></script>
+</html>
