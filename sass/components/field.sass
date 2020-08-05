@@ -1,0 +1,39 @@
+// FIELD ELEMENT
+
+//
+// VARIABLES
+// 
+
+$field-description-color:           $text-color-x-light      
+
+$field-description-font-size:       $font-size-sm
+
+$field-description-margin-vertical:      .4rem !default
+$field-description-margin-horizontal:    0 !default
+
+//
+// BLOCKS
+//
+.field
+  text-align: left
+
+  &:not(:last-child)
+    margin-bottom: 1.3rem
+
+  //
+  // ELEMENTS
+  //
+
+  // Label Elements
+  &__label
+    display: block
+
+    &:not(:last-child)
+        margin-bottom: .5rem
+
+  // Description Elements
+  &__description
+    display: block
+    margin: $field-description-margin-vertical $field-description-margin-horizontal
+    font-size: $field-description-font-size
+    color: $field-description-color

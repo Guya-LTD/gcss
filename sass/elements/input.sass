@@ -1,0 +1,31 @@
+// INPUT ELEMENT
+
+//
+// VARIABLES
+//
+$input-border-color:                $skin-default-border-color
+
+
+//
+// BLOCKS
+//
+.input
+  @extend %input
+  border-color: $input-border-color
+  //width: 100%
+  box-sizing: border-box
+
+  //
+  // MODIFIERS
+  //
+
+  // Size Modifiers
+  &--sm
+    +input-small
+
+  &--lg
+    +input-large
+
+  // Width Modifier
+  &--block
+    width: 100% !important

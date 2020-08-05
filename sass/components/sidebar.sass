@@ -1,0 +1,111 @@
+// SIDEBAR COMPONENT
+
+
+//
+// VARIABLES
+//
+$sidebar-width:                     25%
+$sidebar-height:                    100%
+
+$sidebar-menu-primary-width:        70px
+$sidebar-menu-primary-margin:       15px
+
+$sidebar-menu-primary-logo-height:  90px
+
+$sidebar-menu-secondary-width:            240px
+$sidebar-menu-secodary-margin:            15px
+$sidebar-menu-secondary-items-padding-y:  20px
+$sidebar-menu-secondary-items-padding-x:  30px
+
+// Sidebar supporter
+.main--has-sidebar
+  margin-left: $sidebar-width
+
+
+//
+// BLOCKS
+//
+.sidebar
+  width: $sidebar-width 
+  height: $sidebar-height // Full-height: remove this if you want "auto" height 
+  position: fixed  // Fixed Sidebar (stay in place on scroll)
+  z-index: 1 // Stay on top
+  top: 0 // Stay at the top
+  left: 0
+  color: $text-color-x-light
+  font-size: $font-size-sm
+  font-weight: 500
+
+  //
+  // ELEMENTS
+  //
+
+  &__menu
+    &__primary,
+    &__secondary
+      float: left
+      height: 100%
+    &__primary
+      width: $sidebar-menu-primary-width
+      border: none
+      @include background('primary')
+      @include color('primary')
+      & * ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+      &__logo
+        height: $sidebar-menu-primary-logo-height
+        margin: $sidebar-menu-primary-margin
+      &__top
+        margin: $sidebar-menu-primary-margin
+        text-align: center
+      &__bottom
+        margin: $sidebar-menu-primary-margin
+        text-align: center
+    &__secondary
+      width: $sidebar-menu-secondary-width
+      margin-top: 3px
+      margin-left: 4px
+      & > .list, & > ul
+        padding-top: $sidebar-menu-secondary-items-padding-y !important
+        padding-bottom: $sidebar-menu-secondary-items-padding-y !important
+        padding-left: 13px !important
+        color: $text-color-x-light !important
+        & svg, i, .icon
+          padding-right: 20px
+          color: $text-color-x-light
+          fill: $text-color-x-light
+      &__items
+        padding-top: $sidebar-menu-secondary-items-padding-y !important
+        padding-bottom: $sidebar-menu-secondary-items-padding-y !important
+        padding-left: $sidebar-menu-secondary-items-padding-x !important
+        & svg, i, .icon
+          padding-right: 17px
+          font-size: 13 px
+          color: $text-color-x-light
+          fill: $text-color-x-light
+        & > li
+          padding-top: 8px !important
+          padding-bottom: 8px !important
+          border-radius: 6px
+          & > ul
+            padding-top: 20px !important
+            padding-left: 6px !important
+            & > li
+              padding-bottom: 16px !important
+              &:hover
+                @include color('default')
+              &.active
+                color: $text-color-light
+        
+
+  // Skin Modifiers
+  @include font-family('default')
+  @include background('default')
+  @include border('default')
+
+  
+
+
+

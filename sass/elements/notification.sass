@@ -1,0 +1,83 @@
+// Notification ELEMENT
+
+//
+// VARIABLES
+//
+$card-width:                        280px !default
+
+$notification-background-color:     $color-neutral-white !default
+
+$notification-border-color:         $skin-default-border-color
+$notification-border-width:         $border-width
+$notification-border-radius:        $border-radius
+$notification-border-style:         solid !default
+
+$notification-close-height:                     24px
+$notification-close-width:                      24px
+
+$notification-content-padding-x:                24px
+$notification-content-padding-y:                24px
+
+$notification-content-title-font-size:          $font-size-lg
+$notification-content-title-font-weight:        500
+$notification-content-title-line-height:        24px
+$notification-content-title-letter-spacing:     .8px
+$notification-content-title-margin-y:           8px
+
+$notification-content-message-color:            $text-color-light    
+
+$notification-descriptive-border-width: 3px
+
+//
+// BLOCKS
+//
+.notification
+  background-color: $notification-background-color
+  border-width: $notification-border-width
+  border-color: $notification-border-color
+  border-style: $notification-border-style
+  border-radius: $notification-border-radius
+  display: flex
+
+  //
+  // ELEMENTS
+  //
+
+  &__content
+    padding: $notification-content-padding-y $notification-content-padding-x
+    
+    &__title
+      font-size: $notification-content-title-font-size
+      font-weight: $notification-content-title-font-weight
+      line-height: $notification-content-title-line-height
+      letter-spacing: $notification-content-title-letter-spacing
+      margin-bottom: $notification-content-title-margin-y
+
+    &__message
+      color: $notification-content-message-color
+  
+  &__close
+    align-items: center
+    display: flex
+    flex: 0 0 auto
+    justify-content: center
+    height: $notification-close-height
+    widht: $notification-close-width
+
+  //
+  // MODIFIERS
+  //
+
+  &--descriptive
+    border-left: $notification-descriptive-border-width $notification-border-style
+
+  //
+  // Themify
+
+  &--primary
+
+  &--success
+
+  &--warning
+
+  &--danger
