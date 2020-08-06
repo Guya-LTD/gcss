@@ -1,0 +1,40 @@
+// NAV COMPONENTS
+
+
+//
+// BLOCKS
+//
+.nav
+  list-style-type: none
+  padding: 0
+  margin: 0
+  position: relative
+
+  //
+  // ELEMENTS
+  //
+  
+  &__item
+    display: inline-block
+    margin-right: 30px
+    &--collapse
+      &:hover
+        & > .nav__collapse
+          display: block
+
+  &__collapse
+    //display: inherit
+    display: none
+    list-style-type: none
+    position: absolute
+    padding: 0
+    background: $skin-default-background-color
+    border-width: $border-width
+    border-color: $skin-default-border-color
+    border-style: solid
+    box-shadow: $skin-default-box-shadow
+    & > .nav__item
+      float:none
+      display: list-item !important
+      position: relative !important
+    

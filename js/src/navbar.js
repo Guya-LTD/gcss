@@ -1,18 +1,14 @@
-var el = document.getElementById('navbar-close');
-
-function openNav() {
-
-}
-
-function closeNav() {
-    alert('Hello');
-}
-
-if(el){
-    el.addEventListener('click', closeNav, false);
+//style({display: 'block'})
+window.openNavbar = function openNavbar(navBtn) {    
+    var navbar = navBtn.parentElement
+    var navbarMenu = document.getElementById('navbar-menu')
+    navbar.classList.add('navbar--show')
+    //navbarMenu.classList.add('navbar--show')
 }
 
 
-document.getElementById('navbar-open').addEventListener('click', function() {
-    document.getElementByClass('navbar__menu').style({display: 'block'})
-} ,false);
+window.closeNavbar = function closeNavbar(navBtn) {    
+    var navbar = navBtn.parentElement
+    var navbarMenu = document.getElementById('navbar-menu')
+    navbar.classList.remove('navbar--show')
+}

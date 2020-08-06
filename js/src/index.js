@@ -1,2 +1,2 @@
-//import './navbar';
+import './navbar';
 import './list.js';

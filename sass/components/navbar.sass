@@ -35,7 +35,6 @@ $navbar-menu-margin-horizontal:     20px !default
 =nabar-small
   height: $navbar-height-sm
 
-
 // 
 #navbar-open
   display: none
@@ -82,7 +81,7 @@ $navbar-menu-margin-horizontal:     20px !default
 
   // Menu Element
   &__menu
-
+    transition: all .1s ease-in-out
     // Common
     &__left,
     &__right
@@ -136,6 +135,16 @@ $navbar-menu-margin-horizontal:     20px !default
   // MODIFIERS
   //
   
+  &--show
+    & > .navbar__close
+      display: inline-block !important
+      margin-left: 209px
+    & > .navbar__menu
+      width: 250px !important
+      & > .navbar__menu__left, & > .navbar__menu__right
+        width: 100%
+    
+
   // Size Modifiers
   &--sm
     +nabar-small
@@ -160,24 +169,28 @@ $navbar-menu-margin-horizontal:     20px !default
     &__menu
       margin: 0
       position: absolute
-      display: none
-      width: $navbar-menu-width
+      width: 0
       min-height: 100%
       background: $navbar-background-color
       border-right: $navbar-border-width solid $navbar-border-color
-
       // Common
       &__left,
       &__right
-        
         & > li
           display: block
           width: 80%
           padding-left: 8px
-
+          & > ul
+            display: block
+            padding: 0
+            background: unset
+            border-width: unset
+            border-color: unset
+            border-style: unset
+            box-shadow: unset
       // Left Menu Element
       &__left
-
+        float: right !important
       // Right Menu Element
       &__right
 
