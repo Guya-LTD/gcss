@@ -65,6 +65,7 @@ $navbar-menu-margin-horizontal:     20px !default
   min-height: $navbar-height-sm
   background: $navbar-background-color
   border-bottom: $navbar-border-width solid $navbar-border-color
+  overflow-x: hidden
   //
   // ELEMENTS
   //
@@ -118,7 +119,7 @@ $navbar-menu-margin-horizontal:     20px !default
       display: inline-block !important
       margin-left: 85%
     & > .navbar__collapse
-      width: 250px !important
+      width: 75% !important
       display: block
   &--fixed
     display: fixed
@@ -171,11 +172,30 @@ $navbar-menu-margin-horizontal:     20px !default
       //min-height: 100%
       background: $navbar-background-color
       border-right: $navbar-border-width solid $navbar-border-color
+      padding-left: 16px
+      padding-right: 16px
+      margin-top: 0
+      &--secondary
+        height: 100%
       & > .nav, & > ul
-        padding-left: 18px
-        padding-right: 18px
+        //padding-left: 18px
+        //padding-right: 18px
       & > .divider
         display: block
       &__mobile
         display: block
-      
+        padding-top: 16px
+        &__primary
+          //margin-bottom: 8px
+          & > a
+            display: inline-grid
+            text-align: center
+            width: 64px
+            margin-bottom: 29px
+          &__icon
+          &__text
+            margin-top: 7px
+            font-size: $font-size-sm
+        &__secodary
+      & > .nav, & > ul
+        margin-top: 24px
