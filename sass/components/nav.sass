@@ -17,7 +17,18 @@
   &__item
     display: inline-block
     margin-right: 30px
+    line-height: 21px
+    padding: 11px 0
     &--collapse
+      &--open
+        & > .nav__faciliter
+          & > .nav__faciliter__icon
+            &--open
+              display: none !important
+            &--close
+              display: block !important
+        & > .nav__collapse
+          display: block !important
       &:hover
         & > .nav__collapse
           display: block
@@ -27,14 +38,54 @@
     display: none
     list-style-type: none
     position: absolute
-    padding: 0
+    padding: 30px
+    //text-align: center
     background: $skin-default-background-color
     border-width: $border-width
     border-color: $skin-default-border-color
     border-style: solid
     box-shadow: $skin-default-box-shadow
+    z-index: 1
     & > .nav__item
       float:none
+      margin: 0
+      padding: 0
+      padding-bottom: 4px
+      margin-bottom: 10px
       display: list-item !important
       position: relative !important
-    
+      
+  &__faciliter
+    &__icon
+      &--open, &--close
+        float: right
+        display: none
+
+  //
+  // Media query
+  //
+
+  @include screen-sm
+    &__item
+      display: block
+      text-align: left
+      cursor: pointer
+      margin: 0
+      &--collapse
+        &:hover
+          & > .nav__collapse
+            display: none
+    &__collapse
+      display: none
+      border: 0
+      position: relative
+      padding: 0
+      margin: 0
+      box-shadow: unset
+      & > .nav__item
+        margin: 0
+        padding: 0
+    &__faciliter
+      &__icon
+        &--open
+          display: inline-block

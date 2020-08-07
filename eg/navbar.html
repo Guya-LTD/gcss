@@ -5,10 +5,65 @@
     </head>
     <body>
         <nav class='navbar'>
-           <div class='navbar__collapse'>
-               <ul>
-                   <li></li>
-               </ul>
+            <button id='navbar-close' class='navbar__close' onclick='closeNavbar(this)'>X</button>
+            <div class='navbar__brand'>
+                <button id='navbar-open' class='navbar__open' onclick='openNavbar(this)'>Open</button>
+                <div class='navbar__brand__small'>Small</div>
+                <div class='navbar__brand__large'>Large</div>
+                <div class='navbar__search navbar__search--mobile'>
+                    <input type='search' class='input' placehoder='search'>
+                </div>
+            </div>
+            <div class='navbar__collapse'>
+                <div class='navbar__collapse__mobile'></div>
+                <ul class='nav'>
+                    <li class='nav__item'>One</li>
+                    <li class='nav__item nav__item--collapse'  onclick="toggleNavItems(this)">
+                        <span class='nav__faciliter'>
+                            <span class='nav__faciliter__text'>Apple</span>
+                            <span class='nav__faciliter__icon nav__faciliter__icon--open'>O</span>
+                            <span class='nav__faciliter__icon nav__faciliter__icon--close'>C</span>
+                        </span>
+                        <ul class='nav__collapse'>
+                            <li class='nav__item'>sdf one</li>
+                            <li class='nav__item'>sdfdsf Two</li>
+                        </ul>
+                    </li>
+                    <li class='nav__item nav__item--collapse'>Two
+                        <ul class='nav__collapse'>
+                            <li class='nav__item'>Two one</li>
+                            <li class='nav__item'>Two Two</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class='navbar__search navbar__search--desktop'>
+                <input type='search' class='input' placehoder='search'>
+            </div>
+            <div class='divider'></div>
+           <div class='navbar__collapse navbar__collapse--secondary'>
+                <div class='divider'></div>
+                <ul class='nav'>
+                    <li class='nav__item'>One</li>
+                    <li class='nav__item nav__item--collapse'  onclick="toggleNavItems(this)">
+                        <span class='nav__faciliter'>
+                            <span class='nav__faciliter__text'>Apple</span>
+                            <span class='nav__faciliter__icon nav__faciliter__icon--open'>O</span>
+                            <span class='nav__faciliter__icon nav__faciliter__icon--close'>C</span>
+                        </span>
+                        <ul class='nav__collapse'>
+                            <li class='nav__item'>sdf one</li>
+                            <li class='nav__item'>sdfdsf Two</li>
+                        </ul>
+                    </li>
+                    <li class='nav__item nav__item--collapse'>Two
+                        <ul class='nav__collapse'>
+                            <li class='nav__item'>Two one</li>
+                            <li class='nav__item'>Two Two</li>
+                        </ul>
+                    </li>
+                    <li class='nav__item'>Three</li>
+                </ul>
            </div>
         </nav>
     </body>

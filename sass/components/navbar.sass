@@ -65,85 +65,63 @@ $navbar-menu-margin-horizontal:     20px !default
   min-height: $navbar-height-sm
   background: $navbar-background-color
   border-bottom: $navbar-border-width solid $navbar-border-color
-  padding: $navbar-padding-vertical $navbar-padding-horizontal
-
   //
   // ELEMENTS
   //
-
-  // Brand Element
   &__brand
     display: inline-block
     float: left
-
+    margin-right: 61px
+    position: relative
+    line-height: 21px
+    margin-left: 110px
+    padding-top: 17px
+    &__small
+      display: none
     &__large > a > img
       max-height: $navbar-height
-
-  // Menu Element
-  &__menu
+    & > .navbar__search--mobile
+      display: none
+    &--remove
+      display: none
+  &__collapse
+    display: inline-block
     transition: all .1s ease-in-out
-    // Common
-    &__left,
-    &__right
-      margin: 0
-      padding: 0
-      vertical-align: top 
-      display: inline-block
-      list-style-type: none
-      margin-top: $navbar-menu-margin-vertical
-      margin-left: $navbar-menu-margin-horizontal
-
-      & > li
-        display: inline-block
-        position: relative
-        float: left
-        margin: .8em 0em
-
-        &:hover
-          & > ul
-            display: block
-
-        // submenu
-        & > ul
-          display: none
-          float: none
-          position: absolute
-          padding: 0
-          margin: 0
-          padding: 15px
-          width: max-content
-          background: $navbar-menu-background-color
-          border-width: $navbar-menu-border-width
-          border-color: $navbar-menu-border-color
-          border-style: $navbar-menu-border-style
-          box-shadow: $navbar-menu-border-shadow
-
-          & > li
-            width: 100%
-            display: block
-
-    // Left Menu Element
-    &__left
-      float: left
-
-    // Right Menu Element
-    &__right
-      float: right
-
+    position: relative
+    line-height: 21px
+    padding-top: 6px
+    padding-right: 8em
+    padding-bottom: 6px
+    padding-left: 3px
+    &--secondary
+      padding-top: 6px
+      padding-right: 8em
+      padding-bottom: 6px
+      margin-left: 110px
+    & > .divider
+      display: none
+    &__mobile
+      display: none
+  &__search
+    display: inline-block
+    float: right
+    position: relative
+    line-height: 21px
+    padding: 11px 0
+    margin-right: 100px
 
   //
   // MODIFIERS
   //
-  
   &--show
     & > .navbar__close
       display: inline-block !important
-      margin-left: 209px
-    & > .navbar__menu
+      margin-left: 85%
+    & > .navbar__collapse
       width: 250px !important
-      & > .navbar__menu__left, & > .navbar__menu__right
-        width: 100%
-    
+      display: block
+  &--fixed
+    display: fixed
 
   // Size Modifiers
   &--sm
@@ -164,34 +142,40 @@ $navbar-menu-margin-horizontal:     20px !default
     margin: 0
     padding: 0
     display: inline-block
-
-    // Menu Element
-    &__menu
+    & > .divider
+      display: none
+    & > .navbar__search--desktop
+      display: none
+    &__brand
+      width: 100%
+      margin-left: 0
+      padding-right: 10px
+      padding-left: 10px
+      padding-top: 13px
+      padding-bottom: 10px
+      box-shadow: 0 1px 2px rgba(0,0,0,.1)
+      & > .navbar__open
+        margin-right: 24px
+      &__small
+        display: block
+      &__large
+        display: none
+      & > .navbar__search--mobile
+        display: block
+    &__collapse
+      display: none
       margin: 0
-      position: absolute
+      padding: 0
+      //position: absolute
       width: 0
-      min-height: 100%
+      //min-height: 100%
       background: $navbar-background-color
       border-right: $navbar-border-width solid $navbar-border-color
-      // Common
-      &__left,
-      &__right
-        & > li
-          display: block
-          width: 80%
-          padding-left: 8px
-          & > ul
-            display: block
-            padding: 0
-            background: unset
-            border-width: unset
-            border-color: unset
-            border-style: unset
-            box-shadow: unset
-      // Left Menu Element
-      &__left
-        float: right !important
-      // Right Menu Element
-      &__right
-
+      & > .nav, & > ul
+        padding-left: 18px
+        padding-right: 18px
+      & > .divider
+        display: block
+      &__mobile
+        display: block
       
