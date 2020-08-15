@@ -57,7 +57,7 @@ module.exports = {
                 }, 
                  {
                    // This loader resolves url() and @imports inside CSS
-                   loader: "css-loader",
+                   loader: "css-loader"
                  },
                  {
                    // Then we apply postCSS fixes like autoprefixer and minifying
@@ -82,6 +82,7 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                   name: '[path][name].[ext]',
+                  publicPath: '../'
                 }
               }
             ]

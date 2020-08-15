@@ -66,6 +66,7 @@ $navbar-menu-margin-horizontal:     20px !default
   background: $navbar-background-color
   border-bottom: $navbar-border-width solid $navbar-border-color
   overflow-x: hidden
+
   //
   // ELEMENTS
   //
@@ -76,7 +77,7 @@ $navbar-menu-margin-horizontal:     20px !default
     position: relative
     line-height: 21px
     margin-left: 110px
-    padding-top: 17px
+    //padding-top: 17px
     &__small
       display: none
     &__large > a > img
@@ -94,15 +95,34 @@ $navbar-menu-margin-horizontal:     20px !default
     padding-right: 8em
     padding-bottom: 6px
     padding-left: 3px
-    &--secondary
-      padding-top: 6px
-      padding-right: 8em
-      padding-bottom: 6px
-      margin-left: 110px
     & > .divider
       display: none
     &__mobile
       display: none
+    &--secondary
+      padding-top: 0 !important //6px
+      padding-right: 8em
+      padding-bottom: 0 !important//6px
+      margin-left: 110px
+      float: left
+      height: 53px
+      & > .nav,
+      & > ul
+        height: 100%
+        & > .nav__item,
+        & > li
+          padding: 0 !important
+          height: 100%
+          & > .link,
+          & > a
+            display: table-cell
+            vertical-align: middle
+            //width: 94px
+            height: 55px
+            padding-bottom: 5px
+            padding-top: 5px
+    &--right
+      float: right
   &__search
     display: inline-block
     float: right
