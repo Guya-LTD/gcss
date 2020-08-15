@@ -22,8 +22,6 @@ $icon-width-lg:                     35px !default
   height: $icon-height
   width: $icon-width
 =icon-large
-  height: $icon-height-lg
-  width: $icon-width-lg
 
 //
 // BLOCKS
@@ -34,6 +32,16 @@ $icon-width-lg:                     35px !default
   //
   // MODIFIERS
   //
+  &--vertical
+    display: inline-grid
+    text-align: center
+    height: auto
+    width: 99px
+    & > span
+      & > svg
+        fill: white
+        padding-bottom: 20px
+        padding-top: 24px
 
   // Size Modifiers
   &--sm
@@ -41,3 +49,7 @@ $icon-width-lg:                     35px !default
 
   &--lg
     +icon-large
+    & > span
+      & > svg
+        height: 32px
+        width: 32px

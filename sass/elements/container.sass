@@ -30,11 +30,31 @@
   //
   // MODIFIERS
   //
+  &--menu
+    & > .container__body
+      padding-top: 20px
+      padding-bottom: 20px
 
   &--fluid
     width: 100%
 
   &--beaker
     border-top-left-radius: 0
-    border-radius: 12px 0 0 12px
+    //border-radius: 12px 0 0 12px
+    border-radius: 12px 0px 0px 12px
     box-shadow: 0 0 30px 0 #e4e7eb
+
+  &--round
+    border-top-left-radius: 0
+    border-radius: 12px 12px 12px 12px
+    box-shadow: 0 0 30px 0 #e4e7eb
+
+  @include font-family('default')
+  @include background('default')
+  @include color('default')
+  @include fill('default')
+  @include border('default')
+
+  &--primary
+    @include color('primary')
+    @include fill('primary')
