@@ -57,7 +57,7 @@ $navbar-menu-margin-horizontal:     20px !default
 // BLOCKS
 //
 .navbar
-  position: absolute
+  position: relative //absolute
   left: 0
   right: 0
   top: 0
@@ -65,7 +65,7 @@ $navbar-menu-margin-horizontal:     20px !default
   min-height: $navbar-height-sm
   background: $navbar-background-color
   border-bottom: $navbar-border-width solid $navbar-border-color
-  overflow-x: hidden
+  overflow: hidden
 
   //
   // ELEMENTS
@@ -163,6 +163,7 @@ $navbar-menu-margin-horizontal:     20px !default
     margin: 0
     padding: 0
     display: inline-block
+    overflow: auto
     & > .divider
       display: none
     & > .navbar__search--desktop

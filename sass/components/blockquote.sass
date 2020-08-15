@@ -1,0 +1,46 @@
+// BLOCKQUOTE COMPONENT
+
+//
+// Variables
+//
+$blockquote-margin-vertical:        1.5em !default
+$blockquote-margin-horizontal:      10px !default
+
+$blockquote-padding-vertical:       0 !default
+$blockquote-padding-horizontal:     24px !default
+
+
+//
+// BLOCKS
+//
+.blockquote
+  word-wrap: break-word !important
+  border-left-width: .2em !important
+  border-left-style: solid !important
+  margin: $blockquote-margin-vertical $blockquote-margin-horizontal
+  padding: $blockquote-padding-vertical $blockquote-padding-horizontal
+  padding-top: 5px !important
+
+
+  //
+  // ELEMENTS
+  //
+  &__header
+    margin: 8px 0 16px
+  &__body
+  &__footer
+    margin-top: 16px
+
+  // Size modifiers
+  &--lg
+    & > .blockquote__body
+      font-size: 18px
+      line-height: 25px
+
+  // Skin modifiers
+  @include font-family('default')
+  @include color('default')
+  @include border('default')
+
+  &--primary
+    @include border('primary')

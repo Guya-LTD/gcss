@@ -30,6 +30,12 @@ $field-description-margin-horizontal:    0 !default
 
     &:not(:last-child)
         margin-bottom: .5rem
+  &__addon
+    //height: 2.5em
+    width: auto
+    position: absolute
+    margin: 0.6em
+    z-index: 999
 
   // Description Elements
   &__description
@@ -37,3 +43,25 @@ $field-description-margin-horizontal:    0 !default
     margin: $field-description-margin-vertical $field-description-margin-horizontal
     font-size: $field-description-font-size
     color: $field-description-color
+
+  // Modifiers
+  &--addon-left,
+  &--addon-right
+    & > .input,
+    & > input,
+    & > select
+      width: 218px
+    & > .field__addon
+      & > .icon,
+      & > svg
+        //@include fill('default')
+  &--addon-left
+    & > .input,
+    & > input,
+    & > select
+      padding-left: 2.5em
+  &--addon-right
+    & > .input,
+    & > input,
+    & > select
+      padding-right: 5.5rem
