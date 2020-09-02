@@ -28,6 +28,13 @@ $notification-content-message-color:            $text-color-light
 
 $notification-descriptive-border-width: 3px
 
+// 
+// SPECFIC MIXINS
+//
+// The sizes use mixins so they can be used at different breakpoints
+=notification-small
+  font-size: $font-size-sm
+
 //
 // BLOCKS
 //
@@ -81,3 +88,12 @@ $notification-descriptive-border-width: 3px
   &--warning
 
   &--danger
+
+  // Size
+  &--sm
+    +notification-small
+    & > .notification__content
+      padding: 12px 8px !important
+  // Modifiers
+  &--bottom-border
+    border-top: 0

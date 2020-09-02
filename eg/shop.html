@@ -4,27 +4,94 @@
         <link rel="stylesheet" href="../dist/css/gcss.css">
     </head>
     <body>
-        <nav class='navbar theme-cornflower-blue'>
-            <div class='row'>
-                <div class='col-xs-1'></div>
-                <div class='col-xs-2 col-lg-1 navbar__brand'>
-                    <div class='navbar__brand__small'><a href="#"><img class='logo logo--xs' src='images/guya-shop-logoa.png'/></a></div>
-                    <div class='navbar__brand__large'><a href="#"><img class='logo logo--sm' src='images/guya-shop-logo.png' /></a></div>
-                </div>
-                <div class='col-xs-8 col-lg-8 navbar__collapse'>
+        <nav class='navbar'>
+            <button class='navbar__close' onclick='closeNavbar(this)'>X</button>
+            <div class='row navbar__row navbar__row--lg theme-cornflower-blue'>
+                <div class='col-xs-1' style='padding-right: 0'></div>
+                <div class='col-xs-10 col-sm-2 col-lg-1 navbar__brand'>
                     <div class='row'>
+                        <div class='col-xs-1 navbar__open'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height='100%' viewBox="0 0 512 512"><title>ionicons-v5-p</title><line x1="96" y1="304" x2="416" y2="304" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="96" y1="208" x2="416" y2="208" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="96" y1="112" x2="416" y2="112" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="96" y1="400" x2="416" y2="400" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                        </div>
                         <div class='col-xs'>
+                            <div class='navbar__brand__small'><a href="#"><img class='logo logo--sm' src='images/guya-shop-logo.png'/></a></div>
+                            <div class='navbar__brand__large'><a href="#"><img class='logo logo--sm' src='images/guya-shop-logo.png' /></a></div>
+                        </div>
+                        <div class='col-xs end-xs'>
+                            <a href='#'>
+                                <svg role="img" height='auto' width='20px' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>KaiOS icon</title><path d="M4.47 0a2.81 2.81 0 0 0-2.84 2.78v18.43A2.8 2.8 0 0 0 4.47 24a2.8 2.8 0 0 0 2.85-2.78V2.78A2.83 2.83 0 0 0 4.47 0zm9.4 8.54a2.8 2.8 0 0 0-3.89-.66 2.68 2.68 0 0 0-.68 3.8l8 11.15a2.81 2.81 0 0 0 3.88.66 2.68 2.68 0 0 0 .74-3.72l-.06-.09-7.98-11.14zm3.65-1.18a3.71 3.71 0 0 0 3.74-3.67A3.71 3.71 0 0 0 17.52.02a3.71 3.71 0 0 0-3.75 3.67 3.71 3.71 0 0 0 3.75 3.67z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class='row navbar__brand__search'>
+                        <input type='search' class='input input--search'>
+                    </div>
+                </div>
+                <div class='col-xs-12 col-sm-8 col-lg-8 navbar__collapse'>
+                    <div class='row'>
+                        <div class='col-xs-12 col-sm'>
                             <button class='button button--primary button--sm theme-cornflower-blue typography-semi-bold'>Sell on Guya</button>
                         </div>
-                        <div class='col-offse-xs'>bbb</div>
+                        <div class='col-xs'>
+                            <div class='row end-xs'>
+                                <div class='navbar__collapse__search'>
+                                    <input type='search' class='input input--search'>
+                                </div>
+                                <div>
+                                    <a href='#'>
+                                        <svg role="img" height='100%' width='20px' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>KaiOS icon</title><path d="M4.47 0a2.81 2.81 0 0 0-2.84 2.78v18.43A2.8 2.8 0 0 0 4.47 24a2.8 2.8 0 0 0 2.85-2.78V2.78A2.83 2.83 0 0 0 4.47 0zm9.4 8.54a2.8 2.8 0 0 0-3.89-.66 2.68 2.68 0 0 0-.68 3.8l8 11.15a2.81 2.81 0 0 0 3.88.66 2.68 2.68 0 0 0 .74-3.72l-.06-.09-7.98-11.14zm3.65-1.18a3.71 3.71 0 0 0 3.74-3.67A3.71 3.71 0 0 0 17.52.02a3.71 3.71 0 0 0-3.75 3.67 3.71 3.71 0 0 0 3.75 3.67z"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class='divider'></div>
-            <div class='row'>
-                dsfd
+            
+            <div class='row navbar__row'>
+                <div class='col-xs-1'></div>
+                <div class='col-xs-11 navbar__collapse navbar__collapse--sm'>
+                    <ul class='nav'>
+                        <li class='nav__item'>
+                            <a class='link link--nav link--sm theme-red' href='#'>
+                                One
+                            </a>
+                        </li>
+                        <li class='nav__item nav__item--collapse'  onclick="toggleNavItems(this)">
+                            <a class='nav__faciliter link link--nav link--sm theme-red' href='#'>
+                                <span class='nav__faciliter__text'>Apple</span>
+                                <span class='nav__faciliter__icon nav__faciliter__icon--open'>O</span>
+                                <span class='nav__faciliter__icon nav__faciliter__icon--close'>C</span>
+                            </a>
+                            <ul class='nav__collapse'>
+                                <span class='nav__collapse__left'>
+                                    <li class='nav__item'>Left long text</li>
+                                    <li class='nav__item'>Left 2 long text</li>
+                                </span>
+                                <span class='nav__collapse__right'>
+                                    <li class='nav__item'>Right long text</li>
+                                    <li class='nav__item'>Right 2 long text</li>
+                                </span>
+                            </ul>
+                        </li>
+                        <li class='nav__item'>
+                            <a class='link link--nav link--sm theme-red' href='#'>
+                                Three
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
+        <a class="row center-xs notification notification--sm notification--bottom-border" href="#">
+            <div class="col-xs-6 notification__content">
+                <svg role="img" height='100%' width='20px' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>KaiOS icon</title><path d="M4.47 0a2.81 2.81 0 0 0-2.84 2.78v18.43A2.8 2.8 0 0 0 4.47 24a2.8 2.8 0 0 0 2.85-2.78V2.78A2.83 2.83 0 0 0 4.47 0zm9.4 8.54a2.8 2.8 0 0 0-3.89-.66 2.68 2.68 0 0 0-.68 3.8l8 11.15a2.81 2.81 0 0 0 3.88.66 2.68 2.68 0 0 0 .74-3.72l-.06-.09-7.98-11.14zm3.65-1.18a3.71 3.71 0 0 0 3.74-3.67A3.71 3.71 0 0 0 17.52.02a3.71 3.71 0 0 0-3.75 3.67 3.71 3.71 0 0 0 3.75 3.67z"/></svg>
+                <span>Money Back Guarantee.</span>
+            </div>
+        </a>
+        <div class='row'>
+            <image src='images/tv-ad-li-mobile.webp' />
+        </div>
     </body>
     <script src='../dist/js/gcss.js'></script>
 </html>

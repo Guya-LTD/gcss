@@ -12,20 +12,42 @@ $navbar-border-width:               $border-width
 //
 .navbar
   border-bottom: $navbar-border-width solid $navbar-border-color
-  & > .row
-    min-height: 48px
   //
   // ELEMENTS
   //
+  &__open
+    display: none
+  &__close
+    display: none
+    position: absolute
+    margin-left: 82%
   &__brand
     margin-right: 25px
     &__small
       display: none
+    &__search
+      display: none
+  &__row
+    min-height: 52px
+    @include background('default')
+    @include color('default')
+    @include border('default')
+    &--lg
+      min-height: 62px
   &__collapse
     transition: all .1s ease-in-out
     line-height: 21px
-    padding-top: 12px
-    padding-bottom: 6px
+    padding-top: 13px
+    padding-bottom: 13px
+    & > div,
+    & > .row
+      & > div
+        & > div
+          & > div
+            margin-right: 20px
+    &--sm
+      padding-top: 5px
+      padding-bottom: 5px
   // Skin Modifiers
   @include font-family('default')
   @include background('default')
@@ -47,8 +69,38 @@ $navbar-border-width:               $border-width
   // Media query
   //
   @include screen-sm
+    &__open
+      display: block
+      margin-left: 0
+      padding-left: 0
+    & > .row
+      min-height: 0
     &__brand
+      padding-top: 7px
+      padding-left: 0
       &__small
         display: block
       &__large
         display: none
+      &__search
+        display: block
+        padding-top: 10px
+        padding-bottom: 10px
+    &__collapse
+      display: none
+      position: absolute
+      height: 100%
+      width: 80%
+      padding-left: 20px
+      padding-right: 20px
+      background: $color-neutral-white
+      border-right: $navbar-border-width solid $navbar-border-color
+      & > * .button,
+      & > * button,
+      & > * .input,
+      & > * input,
+      & > * .select,
+      & > * select
+        width: 100%
+    &__brand
+      margin-right: 0
