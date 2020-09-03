@@ -1,9 +1,30 @@
 
 
 .hero
+  margin-bottom: 60px
   &__left
+    margin-top: 40px
     &--quote
       margin-top: 40px
   &__right
-
+  // Skin Modifiers
+  @include font-family('default')
+  @include background('default')
+  @include color('default')
+  @include border('default')
+  &--primary
+    @include background('primary')
+    @include color('primary')
+  &--light
+    @include background('light')
+    @include color('light')
+  &--success
+    @include background('success')
+    @include color('success')
+  &--warning
+    @include background('warning')
+    @include color('warning')
+  &--danger
+    @include background('danger')
+    @include color('danger')
     

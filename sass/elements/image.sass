@@ -1,6 +1,5 @@
 $dimensions: 16 24 32 48 64 96 128 !default
-$radius-rounded: 6px !default
-
+$radius-rounded: 290486px !default
 
 .image
   display: block
@@ -11,6 +10,7 @@ $radius-rounded: 6px !default
     width: 100%
     &.is-rounded
       border-radius: $radius-rounded
+      height: 121px
   &.is-fullwidth
     width: 100%
   // Ratio
@@ -71,3 +71,23 @@ $radius-rounded: 6px !default
     &.is-#{$dimension}x#{$dimension}
       height: $dimension * 1px
       width: $dimension * 1px
+
+  // Skin Modifiers
+  & > img
+    @include background('default')
+    @include border('default')
+  &--primary
+    & > img
+      @include background('primary')
+  &--light
+    & > img
+      @include background('light')
+  &--success
+    & > img
+      @include background('success')
+  &--warning
+    & > img
+      @include background('warning')
+  &--danger
+    & > img
+      @include background('danger')
