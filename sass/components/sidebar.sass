@@ -19,18 +19,18 @@ $sidebar-menu-secondary-items-padding-x:  30px
 
 // Sidebar supporter
 .main--has-sidebar
-  margin-left: $sidebar-width
-  position: fixed
+  //margin-left: $sidebar-width
+  //position: fixed
   top: 0
   left: 0
   right: 0
-
+  margin: 0 !important
 
 //
 // BLOCKS
 //
 .sidebar
-  width: $sidebar-width 
+  //width: $sidebar-width 
   height: $sidebar-height // Full-height: remove this if you want "auto" height 
   position: fixed  // Fixed Sidebar (stay in place on scroll)
   z-index: 1 // Stay on top
@@ -39,6 +39,7 @@ $sidebar-menu-secondary-items-padding-x:  30px
   color: $text-color-x-light 
   font-size: $font-size-sm
   font-weight: 500
+  padding-left: 0 !important 
 
   //
   // ELEMENTS
@@ -70,7 +71,7 @@ $sidebar-menu-secondary-items-padding-x:  30px
     &__secondary
       width: $sidebar-menu-secondary-width
       margin-top: 3px
-      margin-left: 4px
+      margin-left: 39px
       & > .list, & > ul
         padding-top: $sidebar-menu-secondary-items-padding-y !important
         padding-bottom: $sidebar-menu-secondary-items-padding-y !important
@@ -108,8 +109,3 @@ $sidebar-menu-secondary-items-padding-x:  30px
   @include font-family('default')
   @include background('default')
   @include border('default')
-
-  
-
-
-
