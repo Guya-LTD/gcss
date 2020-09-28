@@ -11,10 +11,16 @@ $input-border-color:                $skin-default-border-color
 //
 .input
   @extend %input
-  width: -webkit-fill-available
+  //width: -webkit-fill-available
+  width: 100%
   border-color: $input-border-color
   //width: 100%
   box-sizing: border-box
+  box-shadow: inset 0 0.0625em 0.125em rgba(10,10,10,.05)
+  color: #363636
+  height: 2.5em
+  &:focus
+    
 
   //
   // MODIFIERS
