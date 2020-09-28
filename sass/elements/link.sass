@@ -37,6 +37,7 @@ $link-font-size-lg:                 $font-size-lg
   text-decoration: none
   border-radius: $link-border-radius
   padding: .3em .6em
+  color: $color-neutral-black
   
   &:hover,
   &.hovered
@@ -92,3 +93,23 @@ $link-font-size-lg:                 $font-size-lg
     & > .link__icon
       & > svg
         @include fill('light')
+
+  // Skin Modifiers
+  @include font-family('default')
+  @include color('default')
+
+  &--primary
+    @include background('primary')
+    @include color('primary')
+
+  &--success
+    @include background('success')
+    @include color('success')
+
+  &--warning
+    @include background('warning')
+    @include color('warning')
+
+  &--danger
+    @include background('danger')
+    @include color('danger')

@@ -16,9 +16,13 @@ $field-description-margin-horizontal:    0 !default
 //
 .field
   text-align: left
-
   &:not(:last-child)
     margin-bottom: 1.3rem
+  &:focus-within
+    @include color('default')
+    & * svg
+      @include color('default')
+      @include fill('default')
 
   //
   // ELEMENTS
@@ -27,6 +31,7 @@ $field-description-margin-horizontal:    0 !default
   // Label Elements
   &__label
     display: block
+    font-weight: 500
 
     &:not(:last-child)
         margin-bottom: .5rem
@@ -36,12 +41,25 @@ $field-description-margin-horizontal:    0 !default
     position: absolute
     margin: 0.6em
     z-index: 999
+    &--prepend,
+    &--append
+      color: #dbdbdb
+      & > svg
+        color: #dbdbdb
+    &--prepend
+    &--append
+      //right: 2%
+      position: relative
+      top: -37px
+      float: right
 
   // Description Elements
   &__description
     display: block
-    margin: $field-description-margin-vertical $field-description-margin-horizontal
-    font-size: $field-description-font-size
+    font-size: .75rem
+    margin-top: .25rem
+    //margin: $field-description-margin-vertical $field-description-margin-horizontal
+    //font-size: $field-description-font-size
     color: $field-description-color
 
   // Modifiers
@@ -54,7 +72,7 @@ $field-description-margin-horizontal:    0 !default
     & > .field__addon
       & > .icon,
       & > svg
-        //@include fill('default')
+        fill: red
   &--addon-left
     & > .input,
     & > input,
@@ -65,3 +83,7 @@ $field-description-margin-horizontal:    0 !default
     & > input,
     & > select
       padding-right: 5.5rem
+
+  // Skin Modifiers
+  @include font-family('default')
+  @include border('default')
