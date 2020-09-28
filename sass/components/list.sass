@@ -15,7 +15,7 @@ $sidebar-width:                     25%
   margin: 0
   padding: 0
 
-// vertical-align:middle;
+  // vertical-align:middle;
 
   //
   // ELEMENTS
@@ -102,3 +102,19 @@ $sidebar-width:                     25%
   // Skin Modifiers
   @include font-family('default')
   @include color('default')
+
+  &--primary
+    @include background('primary')
+    @include color('primary')
+
+  &--success
+    @include background('success')
+    @include color('success')
+
+  &--warning
+    @include background('warning')
+    @include color('warning')
+
+  &--danger
+    @include background('danger')
+    @include color('danger')
