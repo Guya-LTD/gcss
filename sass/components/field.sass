@@ -19,11 +19,11 @@ $field-description-margin-horizontal:    0 !default
   &:not(:last-child)
     margin-bottom: 1.3rem
   &:focus-within
-    @include color('default')
-    & * svg
-      @include color('default')
-      @include fill('default')
-
+    color: $color-shark
+    & > .field__addon
+      color: $color-shark
+      & * svg
+        fill: $color-shark
   //
   // ELEMENTS
   //
