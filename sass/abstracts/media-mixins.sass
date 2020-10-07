@@ -1,0 +1,522 @@
+/**
+  *
+  * Media Queries.
+  *
+  * Media query must be prefixed by `screen`.
+  * GENERAL naming follows `screen-{phone-name|null}-{orientation|null}-{size|null}`.
+  * If media query does not have `{orientation}` it is assumed to be include both types 
+  * of orientation i.e portrait and landscape
+  *
+  * Examples:
+  *   - screen-sm
+  *   - screen-iphone-portrait
+  */
+
+/**
+ *
+ * Global Sizes
+ */
+  
+/* ----------- Large screens ----------- */
+@mixin screen-xl
+  @media only screen and (min-width : 1824px)
+    @content
+
+
+/* ----------- Desktops and laptops ----------- */
+@mixin screen-lg
+  @media only screen and (min-width : 1224px)
+    @content
+
+
+/* ----------- Tablets (portrait and landscape) ----------- */
+@mixin screen-md
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+    @content
+
+
+/* ----------- Smartphones (portrait and landscape) ----------- */
+@mixin screen-sm
+  @media only screen and (min-device-width : 80px) and (max-device-width : 768px)
+    @content
+
+
+/**
+ *
+ * Device specfic media queries
+ */
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-iphone4
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+
+/* Portrait */
+@mixin screen-iphone4-portrait
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-iphone4-landscape
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)
+    @content
+
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-iphone5
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+
+/* Portrait */
+@mixin screen-iphone5-portrait
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-iphone5-landscape
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)
+    @content
+
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-iphone68
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+
+/* Portrait */
+@mixin screen-iphone68-portrait
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-iphone68-landscape
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)
+    @content
+
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-iphone68plus
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3)
+    @content
+
+
+/* Portrait */
+@mixin screen-iphone68plus-portrait
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-iphone68plus-landscape
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape)
+    @content
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-iphonex
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3)
+    @content
+
+
+/* Portrait */
+@mixin screen-iphonex-portrait
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait)
+    @content
+
+  
+/* Landscape */
+@mixin screen-iphonex-landscape
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape)
+    @content
+
+
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-galaxys3
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2)
+    @content
+
+
+/* Portrait */
+@mixin screen-galaxys3-portrait
+  @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)
+    @content
+
+  
+/* Landscape */
+@mixin screen-galaxys3-landscape
+  @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)
+    @content
+
+  
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-galaxys45
+  @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) 
+    @content
+
+  
+/* Portrait */
+@mixin screen-galaxys45-portrait
+  @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-galaxys45-landscape
+  @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)
+    @content
+
+  
+/* ----------- Galaxy S6 ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-galaxys6
+  @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)
+    @content
+
+
+/* Portrait */
+@mixin screen-galaxys6-portrait
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-galaxys6-landscape
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: landscape)
+    @content
+
+
+/* ----------- Google Pixel ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-googlepixel
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3)
+    @content
+
+
+/* Portrait */
+@mixin screen-googlepixel-portrait
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-googlepixel-landscape
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)
+    @content
+
+
+/* ----------- Google Pixel XL ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-googlepixelxl
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4)
+    @content
+
+
+/* Portrait */
+@mixin screen-googlepixelxl-portrait
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-googlepixelxl-landscape
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: landscape)
+    @content
+
+
+/* ----------- HTC One ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-htcone
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3)
+    @content
+
+
+/* Portrait */
+@mixin screen-htcone-portrait
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-htcone-landscape
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)
+    @content
+
+
+/* ----------- Windows Phone ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-windowsphone
+  @media screen and (device-width: 480px) and (device-height: 800px)
+    @content
+
+
+/* Portrait */
+@mixin screen-windowsphone-portrait
+  @media screen and (device-width: 480px) and (device-height: 800px) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-windowsphone-landscape
+  @media screen and (device-width: 480px) and (device-height: 800px) and (orientation: landscape)
+    @content
+
+  
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-ipadair
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)
+    @content
+
+
+/* Portrait */
+@mixin screen-ipadair-portrait
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1)
+    @content
+
+
+/* Landscape */
+@mixin screen-ipadair-landscape
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1)
+    @content
+
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-pro9
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+
+/* Portrait */
+@mixin screen-pro9-portrait
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+
+/* Landscape */
+@mixin screen-pro9-landscape
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+
+/* ----------- iPad Pro 10.5"  ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-pro10
+  @media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@mixin screen-pro10-portrait
+  @media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@mixin screen-pro10-landscape
+  @media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+  
+/* ----------- iPad Pro 12.9"  ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-pro12
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px)and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@mixin screen-pro12-portrait
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@mixin screen-pro12-landscape
+  @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+  
+/* ----------- Galaxy Tab 2 ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-galaxytab2
+  @media (min-device-width: 800px) and (max-device-width: 1280px)
+    @content
+
+
+/* Portrait */
+@mixin screen-galaxytab2-portrait
+  @media (max-device-width: 800px) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-galaxytab2-landscape
+  @media (max-device-width: 1280px) and (orientation: landscape)
+    @content
+
+  
+/* ----------- Galaxy Tab S ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-galaxytabs
+  @media (min-device-width: 800px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+
+/* Portrait */
+@mixin screen-galaxytabs-portrait
+  @media (max-device-width: 800px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+
+/* Landscape */
+@mixin screen-galaxytabs-landscape
+  @media (max-device-width: 1280px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+
+/* ----------- Nexus 7 ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-nexus7
+  @media screen and (device-width: 601px) and (device-height: 906px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332)
+    @content
+
+
+/* Portrait */
+@mixin screen-nexus7-portrait
+  @media screen and (device-width: 601px) and (device-height: 906px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-nexus7-landscape
+  @media screen and (device-width: 601px) and (device-height: 906px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) and (orientation: landscape)
+    @content
+
+
+/* ----------- Nexus 9 ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-nexus9
+  @media screen and (device-width: 1536px) and (device-height: 2048px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332)
+    @content
+
+
+/* Portrait */
+@mixin screen-nexus9-portrait
+  @media screen and (device-width: 1536px) and (device-height: 2048px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-nexus9-landscape
+  @media screen and (device-width: 1536px) and (device-height: 2048px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) and (orientation: landscape)
+    @content
+
+
+/* ----------- Kindle Fire HD 7" ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-kindlefire7
+  @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5)
+    @content
+
+
+/* Portrait */
+@mixin screen-kindlefire7-portrait
+  @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-kindlefire7-landscape
+  @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape)
+    @content
+
+
+/* ----------- Kindle Fire HD 8.9" ----------- */
+
+/* Portrait and Landscape */
+@mixin screen-kindlefire8
+  @media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1.5)
+    @content
+
+
+/* Portrait */
+@mixin screen-kindlefire8-portrait
+  @media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait)
+    @content
+
+
+/* Landscape */
+@mixin screen-kindlefire8-landscape
+  @media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape)
+    @content
+
+
+/* ----------- Laptops ----------- */
+
+/* ----------- Non-Retina Screens ----------- */
+@mixin screen-laptop-non-retina
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)
+    @content
+
+
+/* ----------- Retina Screens ----------- */
+@mixin screen-laptop-retina
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)and (min-resolution: 192dpi)
+    @content
+
+
+/* ----------- Wearables ----------- */
+
+/* ----------- Apple Watch ----------- */
+@mixin screen-wearable-apple-watch
+  @media (max-device-width: 42mm) and (min-device-width: 38mm)
+    @content
+
+
+/* ----------- Moto 360 Watch ----------- */
+@mixin screen-wearable-moto-360-watch
+  @media (max-device-width: 218px) and (max-device-height: 281px)
+    @content

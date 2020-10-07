@@ -1,0 +1,124 @@
+// SIDEBAR COMPONENT
+
+
+//
+// VARIABLES
+//
+$sidebar-width:                     25%
+
+
+//
+// BLOCKS
+//
+.list
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+  // vertical-align:middle;
+
+  //
+  // ELEMENTS
+  //
+  &__header
+    color: $text-color-x-light
+    padding-bottom: 10px
+  &__item
+    height: 14px
+    margin-bottom: 8px
+    padding-top: 12px
+    padding-bottom: 12px
+    padding-left: 18px
+    padding-right: 12px
+    text-align: left
+    //cursor: pointer
+    outline: none
+    & > svg
+      margin-right: 32px
+    &:hover
+      @include color('default')
+      & > svg
+        @include fill('default')
+    &.active
+      //@include color('default')
+      & > svg
+        @include fill('default')
+
+  &__collapse
+    border-radius: 6px 6px 0 0
+    position: relative
+    z-index: 1
+    cursor: pointer
+    &.active
+      margin-bottom: 0 !important
+      background: $color-neutral-white
+      color: $text-color-light
+      box-shadow: 0 5px 15px 0 rgba(0,0,0,.03)
+      & > .list__collapse__faciliter
+        & > .list__collapse__faciliter__icon
+          @include color('default')
+          & > svg
+            @include fill('default')
+    &__itmes
+      display: none
+      list-style-type: none
+      margin: 0
+      padding: 8px 0 !important
+      font-size: $font-size-sm
+      &.active
+        background: $color-neutral-white
+        border-radius: 0 0 6px 6px
+      & > .list__item, & > li
+        padding: 10px 40px 10px 25px !important
+        font-size: $font-size-xs
+        &:hover
+          @include color('default')
+          & > svg
+            @include fill('default')
+        &.active
+          @include color('default')
+          & > svg
+            @include fill('default')
+    &--open
+      display: block !important
+    &--close
+      display: none !important
+    &__faciliter
+      &__text
+      &__icon
+        margin-right: 27px
+        &--open, &--close
+          margin: 0 !important
+          float: right
+        &--open
+          display: inline-block
+        &--close
+          display: none
+
+  //
+  // MODIFIERS
+  //
+
+  &--nav
+    max-width: 230px
+    border-radius: 6px 6px 0 0
+
+  // Skin Modifiers
+  @include font-family('default')
+  @include color('default')
+
+  &--primary
+    @include background('primary')
+    @include color('primary')
+
+  &--success
+    @include background('success')
+    @include color('success')
+
+  &--warning
+    @include background('warning')
+    @include color('warning')
+
+  &--danger
+    @include background('danger')
+    @include color('danger')

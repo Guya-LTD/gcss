@@ -1,0 +1,252 @@
+// NAVBAR ELEMENT
+  
+//
+// VARIABLES
+//
+$navbar-height-sm:                  54px !default
+$navbar-height:                     3.25rem !default
+
+$navbar-background-color:           $skin-default-background-color
+
+$navbar-border-color:               $skin-default-border-color
+$navbar-border-width:               $border-width
+
+$navbar-padding-vertical:           0 !default
+$navbar-padding-horizontal:         8em !default
+
+$navbar-menu-width:                 70% !default
+
+$navbar-menu-border-color:          $skin-default-border-color
+$navbar-menu-border-width:          $border-width
+$navbar-menu-border-radius:         $border-radius
+$navbar-menu-border-style:          solid !default
+
+$navbar-menu-border-shadow:         $skin-default-box-shadow
+
+$navbar-menu-background-color:      $skin-default-background-color
+
+$navbar-menu-margin-vertical:       6px !default
+$navbar-menu-margin-horizontal:     20px !default
+
+// 
+// SPECFIC MIXINS
+//
+// The sizes use mixins so they can be used at different breakpoints
+=nabar-small
+  height: $navbar-height-sm
+
+// 
+#navbar-open
+  display: none
+  float: left
+
+  @include screen-sm
+    display: inline-block
+
+//
+#navbar-close
+  display: none
+  position: absolute
+
+  @include screen-sm
+    position: absolute
+    display: none
+    width: calc($navbar-menu-width + 2%)
+
+//
+// BLOCKS
+//
+.navbar
+  position: relative //absolute
+  left: 0
+  right: 0
+  top: 0
+  z-index: 1
+  min-height: $navbar-height-sm
+  background: $navbar-background-color
+  border-bottom: $navbar-border-width solid $navbar-border-color
+  overflow: hidden
+
+  //
+  // ELEMENTS
+  //
+  &__brand
+    display: inline-block
+    float: left
+    margin-right: 61px
+    position: relative
+    line-height: 21px
+    margin-left: 110px
+    //padding-top: 17px
+    &__small
+      display: none
+    &__large > a > img
+      max-height: $navbar-height
+    & > .navbar__search--mobile
+      display: none
+    &--remove
+      display: none
+  &__collapse
+    display: inline-block
+    transition: all .1s ease-in-out
+    position: relative
+    line-height: 21px
+    padding-top: 6px
+    padding-right: 8em
+    padding-bottom: 6px
+    padding-left: 3px
+    & > .divider
+      display: none
+    &__mobile
+      display: none
+    &--secondary
+      padding-top: 0 !important //6px
+      padding-right: 8em
+      padding-bottom: 0 !important//6px
+      margin-left: 110px
+      float: left
+      height: 53px
+      & > .nav,
+      & > ul
+        height: 100%
+        & > .nav__item,
+        & > li
+          padding: 0 !important
+          height: 100%
+          & > .link,
+          & > a
+            display: table-cell
+            vertical-align: middle
+            //width: 94px
+            height: 55px
+            padding-bottom: 5px
+            padding-top: 5px
+    &--right
+      float: right
+  &__search
+    display: inline-block
+    float: right
+    position: relative
+    line-height: 21px
+    padding: 11px 0
+    margin-right: 100px
+
+  //
+  // MODIFIERS
+  //
+  &--show
+    min-height: 100%
+    height: 100%
+    & > .navbar__close
+      display: inline-block !important
+      margin-left: 85%
+    & > .navbar__collapse
+      width: 75% !important
+      display: block
+  &--fixed
+    display: fixed
+
+  // Size Modifiers
+  &--sm
+    +nabar-small
+
+  // Skin Modifiers
+  @include font-family('default')
+  @include background('default')
+  @include color('default')
+  @include border('default')
+
+  &--primary
+    @include background('primary')
+    @include color('primary')
+
+  &--success
+    @include background('success')
+    @include color('success')
+
+  &--warning
+    @include background('warning')
+    @include color('warning')
+
+  &--danger
+    @include background('danger')
+    @include color('danger')
+
+  //
+  // Media query
+  //
+
+  @include screen-sm
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    margin: 0
+    padding: 0
+    display: inline-block
+    overflow: auto
+    & > .divider
+      display: none
+    & > .navbar__search--desktop
+      display: none
+    &__brand
+      width: 100%
+      margin-left: 0
+      padding-right: 10px
+      padding-left: 10px
+      padding-top: 13px
+      padding-bottom: 10px
+      box-shadow: 0 1px 2px rgba(0,0,0,.1)
+      & > .navbar__open
+        margin-right: 24px
+      &__small
+        display: block
+      &__large
+        display: none
+      & > .navbar__search--mobile
+        display: block
+    &__collapse
+      display: none
+      margin: 0
+      padding: 0
+      //position: absolute
+      width: 0
+      //min-height: 100%
+      background: $navbar-background-color
+      border-right: $navbar-border-width solid $navbar-border-color
+      padding-left: 16px
+      padding-right: 16px
+      margin-top: 0
+      &--right,
+      &--left
+        float: none
+      &--secondary
+        height: 100%
+        & > .nav,
+        & > ul
+          height: 100%
+          & > .nav__item,
+          & > li
+            height: unset
+      & > .nav, & > ul
+        //padding-left: 18px
+        //padding-right: 18px
+      & > .divider
+        display: block
+      &__mobile
+        display: block
+        padding-top: 16px
+        &__primary
+          //margin-bottom: 8px
+          & > a
+            display: inline-grid
+            text-align: center
+            width: 64px
+            margin-bottom: 29px
+          &__icon
+          &__text
+            margin-top: 7px
+            font-size: $font-size-sm
+        &__secodary
+      & > .nav, & > ul
+        margin-top: 24px

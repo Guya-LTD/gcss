@@ -1,0 +1,89 @@
+// FIELD ELEMENT
+
+//
+// VARIABLES
+// 
+
+$field-description-color:           $text-color-x-light      
+
+$field-description-font-size:       $font-size-sm
+
+$field-description-margin-vertical:      .4rem !default
+$field-description-margin-horizontal:    0 !default
+
+//
+// BLOCKS
+//
+.field
+  text-align: left
+  &:not(:last-child)
+    margin-bottom: 1.3rem
+  &:focus-within
+    color: $color-shark
+    & > .field__addon
+      color: $color-shark
+      & > svg
+        fill: $color-shark !important
+  //
+  // ELEMENTS
+  //
+
+  // Label Elements
+  &__label
+    display: block
+    font-weight: 500
+
+    &:not(:last-child)
+        margin-bottom: .5rem
+  &__addon
+    //height: 2.5em
+    width: auto
+    position: absolute
+    margin: 0.6em
+    z-index: 999
+    &--prepend,
+    &--append
+      color: #dbdbdb
+      & > svg
+        color: #dbdbdb
+    &--prepend
+    &--append
+      //right: 2%
+      position: relative
+      top: -37px
+      float: right
+
+  // Description Elements
+  &__description
+    display: block
+    font-size: .75rem
+    margin-top: .25rem
+    //margin: $field-description-margin-vertical $field-description-margin-horizontal
+    //font-size: $field-description-font-size
+    color: $field-description-color
+
+  // Modifiers
+  &--addon-left,
+  &--addon-right
+    & > .input,
+    & > input,
+    & > select
+      width: 218px
+    & > .field__addon
+      & > .icon,
+      & > svg
+        // fill: gray
+  &--addon-left
+    & > .input,
+    & > input,
+    & > select
+      padding-left: 2.5em
+  &--addon-right
+    & > .input,
+    & > input,
+    & > select
+      padding-right: 5.5rem
+
+  // Skin Modifiers
+  @include font-family('default')
+  @include border('default')

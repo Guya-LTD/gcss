@@ -1,0 +1,57 @@
+// ICON ELEMENT
+
+//
+// VARIABLES
+//
+$icon-height-sm:                    18px !default
+$icon-height:                       22px !default
+$icon-height-lg:                    35px !default
+
+$icon-width-sm:                     18px !default
+$icon-width:                        22px !default
+$icon-width-lg:                     35px !default
+
+// 
+// SPECFIC MIXINS
+//
+// The sizes use mixins so they can be used at different breakpoints
+=icon-small
+  height: $icon-height-sm
+  width: $icon-width-sm
+=icon-normal
+  height: $icon-height
+  width: $icon-width
+=icon-large
+
+//
+// BLOCKS
+//
+.icon
+  +icon-normal
+  & > svg
+    fill: #dbdbdb
+
+  //
+  // MODIFIERS
+  //
+  &--vertical
+    display: inline-grid
+    text-align: center
+    height: auto
+    width: 99px
+    & > span
+      & > svg
+        fill: white
+        padding-bottom: 20px
+        padding-top: 24px
+
+  // Size Modifiers
+  &--sm
+    +icon-small
+
+  &--lg
+    +icon-large
+    & > span
+      & > svg
+        height: 32px
+        width: 32px

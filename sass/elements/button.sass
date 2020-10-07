@@ -1,0 +1,143 @@
+// BUTTON ELEMENT
+  
+//
+// VARIABLES
+//
+$button-color:                      $skin-default-text-color !default
+$button-background-color:           $skin-default-background-color !default
+
+$button-font-size-sm:               $font-size-sm
+$button-font-size:                  $font-size-md
+$button-font-size-lg:               $font-size-lg
+
+$button-border-color:               $skin-default-border-color
+$button-border-width:               $border-width
+$button-border-radius-sm:           $border-radius-sm
+$button-border-radius:              $border-radius
+$button-border-radius-lg:           $border-radius-lg
+
+$button-border-hover-color:         $skin-default-border-hover-color
+
+$button-height:                     40px !default
+
+$button-padding-vertical:           calc(0.5em - #{$button-border-width}) !default
+$button-padding-horizontal:         1em !default
+//$button-padding-vertical:           calc(0.5em - #{$button-border-width}) !default
+//$button-padding-horizontal:         1em !default
+
+$button-disabled-background-color:  $disabled-background-color
+$button-disabled-color:             $disabled-color
+
+$button-round-border-radius:        $border-radius-lg !default
+
+$button-transition:                 background-color 0.2s ease 0s, color 0.2s ease 0s
+
+// 
+// SPECFIC MIXINS
+//
+// The sizes use mixins so they can be used at different breakpoints
+=button-small
+  font-size: $button-font-size-sm
+  border-radius: $button-border-radius-sm
+=button-normal
+  font-size: $button-font-size
+  //height: $button-height
+  padding: $button-padding-vertical $button-padding-horizontal
+=button-large
+  font-size: $button-font-size-lg
+  border-radius: $button-border-radius-lg
+
+//
+// BLOCKS
+//
+.button
+  @extend %control
+  @extend %unselectable
+  +button-normal
+  background-color: $button-background-color
+  border-radius: $button-border-radius
+  border-width: $button-border-width
+  border-color: $button-border-color
+  color: $button-color
+  cursor: pointer
+  justify-content: center
+  text-align: center
+  white-space: nowraps
+  outline: none
+  text-decoration: none
+
+  //
+  // STATES
+  //
+  &[disabled]
+    color: $button-disabled-color
+    background-color: $button-disabled-background-color
+
+  &:hover
+    border-color: $button-border-hover-color
+
+  //
+  // ELEMENTS
+  //
+
+  // Icon Element
+  &__icon
+    display: inherit
+    margin-left: -9px
+    margin-right: 4px
+    margin-top: -2px
+
+  //
+  // MODIFIERS
+  //
+
+  // View
+  &--block
+    width: 100%
+
+  // Float Modifiers
+  &--float
+    box-shadow: 0 14px 30px 0 rgba($color-brand-royal-blue,0.2)
+
+  // Size Modifiers
+  &--sm
+    +button-small
+
+  &--lg
+    +button-large
+
+  // Border Modifiers
+  &--border-less
+    border: unset
+    
+  &--round
+    border-radius: $button-round-border-radius
+ 
+  &--pill
+    // COMEBACK:
+
+  // Transition Modifiers
+  &--transition-ease
+    transition: $button-transition
+
+  // Skin Modifiers
+  @include font-family('default')
+  @include background('default')
+  @include color('default')
+  @include border('default')
+
+  &--primary
+    @include background('primary')
+    @include color('primary')
+
+  &--success
+    @include background('success')
+    @include color('success')
+
+  &--warning
+    @include background('warning')
+    @include color('warning')
+
+  &--danger
+    @include background('danger')
+    @include color('danger')

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../dist/css/gcss.css">
+    </head>
+    <body>
+        <div>
+            <ul class='list list--nav'>
+                <li class='list__header'>Catalogs</li>
+                <li class='list__item'>Apple</li>
+                <li class='list__item'>Orange</li>
+                <li class='list__item'>Banana</li>
+            </ul>
+            <ul class='list list--nav'>             
+                <li class='list__item list__collapse' onclick="toggleCollapseListItems(this)">
+                    <span class='list__collapse__faciliter'>
+                        <span class='list__collapse__faciliter__text'>Catalogs</span>
+                        <span class='list__collapse__faciliter__icon list__collapse__faciliter__icon--open'>O</span>
+                        <span class='list__collapse__faciliter__icon list__collapse__faciliter__icon--close'>C</span>
+                    </span>
+                </li>
+                <ul class='list__collapse__itmes'>
+                    <li class='list__item'>Apple</li>
+                    <li class='list__item'>Orange</li>
+                    <li class='list__item'>Banana</li>
+                </ul>
+                <li class='list__item'>Apple</li>
+                <li class='list__item active'>Orange</li>
+                <li class='list__item'>Banana</li>
+            </ul>
+        </div>
+    </body>
+    <script src='../dist/js/gcss.js'></script>
+</html>

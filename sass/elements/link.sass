@@ -1,0 +1,115 @@
+// LINK ELEMENT
+  
+//
+// VARIABLES
+//
+$link-border-radius:                $border-radius-lg
+
+$link-skin-light-background-color:  $skin-default-background-color
+$link-skin-light-color:             $skin-default-text-color
+    
+$link-icon-margin-vertical:         4px
+$link-icon-margin-horizontal:       2px
+
+$link-icon-height:                  16px
+$link-icon-width:                   16px
+
+$link-font-size-sm:                 $font-size-sm-1
+$link-font-size:                    $font-size-md
+$link-font-size-lg:                 $font-size-lg
+
+// 
+// SPECFIC MIXINS
+//
+// The sizes use mixins so they can be used at different breakpoints
+=link-small
+  font-size: $link-font-size-sm
+=link-normal
+  font-size: $link-font-size
+=link-large
+  font-size: $link-font-size-lg
+
+//
+// BLOCKS
+//
+.link
+  +link-normal
+  text-decoration: none
+  border-radius: $link-border-radius
+  padding: .3em .6em
+  color: $color-neutral-black
+  
+  &:hover,
+  &.hovered
+    //@include color('primary')
+
+  //
+  // ELEMENTS
+  //
+
+  // Icon Element
+  &__icon
+    margin-top: $link-icon-margin-vertical
+    margin-right: $link-icon-margin-horizontal
+
+    // Right Modifiers
+    &--right
+      margin-right: 0
+      margin-left: 6px
+
+    & > svg
+      vertical-align: -.3em//-0.09em
+      @include fill('light')
+
+  //
+  // MODIFIERS
+  //
+  &--nav
+    &:hover
+      border-radius: 0 !important
+      border-bottom: 4px solid !important
+      @include border('default')
+      @include color('default')
+
+  // Size Modifiers
+  &--xs
+    font-size: $font-size-xs
+
+  &--sm
+    +link-small
+
+  &--lg
+    +link-large
+
+  // Skin Modifiers
+  @include font-family('default')
+  @include color('default')
+
+  &--light
+    @include color('light')
+    &:hover,
+    &.hovered
+      @include background('light')
+    & > .link__icon
+      & > svg
+        @include fill('light')
+
+  // Skin Modifiers
+  @include font-family('default')
+  @include color('default')
+
+  &--primary
+    @include background('primary')
+    @include color('primary')
+
+  &--success
+    @include background('success')
+    @include color('success')
+
+  &--warning
+    @include background('warning')
+    @include color('warning')
+
+  &--danger
+    @include background('danger')
+    @include color('danger')

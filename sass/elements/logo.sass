@@ -1,0 +1,41 @@
+// LOGO ELEMENT
+
+//
+// VARIABLES
+//
+$logo-width-xs:                     56px !default
+$logo-width-sm:                     105px !default
+$logo-width:                        228px !default
+$logo-width-lg:                     300px !default
+
+//
+// SPECFIC MIXINS
+//
+// The sizes use mixins so they can be used at different breakpoints
+=logo-xsmall
+  width: $logo-width-xs
+=logo-small
+  width: $logo-width-sm
+=logo-normal
+  width: $logo-width
+=logo-large
+  width: $logo-width-lg
+
+//
+// BLOCKS
+//
+.logo
+  +logo-normal
+
+  //
+  // MODIFIERS
+  //
+
+  &--xs
+    +logo-xsmall
+
+  &--sm
+    +logo-small
+
+  &--lg
+    +logo-large

@@ -1,0 +1,107 @@
+// NAV COMPONENTS
+
+
+//
+// BLOCKS
+//
+.nav
+  list-style-type: none
+  padding: 0
+  margin: 0
+  position: relative
+
+  //
+  // ELEMENTS
+  //
+  
+  &__item
+    display: inline-block
+    margin-right: 30px
+    line-height: 21px
+    padding: 11px 0
+    &--collapse
+      &--open
+        & > .nav__faciliter
+          & > .nav__faciliter__icon
+            &--open
+              display: none !important
+            &--close
+              display: block !important
+        & > .nav__collapse
+          display: block !important
+      &:hover
+        & > .nav__collapse
+          display: block
+
+  &__collapse
+    //display: inherit
+    display: none
+    list-style-type: none
+    position: fixed //absolute
+    padding: 0 !important
+    //text-align: center
+    background: $skin-default-background-color
+    border-width: $border-width
+    border-color: $skin-default-border-color
+    border-style: solid
+    box-shadow: $skin-default-box-shadow
+    z-index: 1
+    &__left
+      float: left
+      padding: 30px
+    &__right
+      float: right
+      padding: 30px
+      background: #f5f5f5
+    & * .nav__item
+      float:none
+      margin: 0
+      padding: 0
+      padding-bottom: 4px
+      margin-bottom: 10px
+      display: list-item !important
+      position: relative !important
+      
+  &__faciliter
+    &__icon
+      &--open, &--close
+        float: right
+        display: none
+
+  //
+  // Media query
+  //
+
+  @include screen-sm
+    &__item
+      display: block
+      text-align: left
+      cursor: pointer
+      margin: 0
+      &--collapse
+        &:hover
+          & > .nav__collapse
+            display: none
+    &__collapse
+      display: none
+      border: 0
+      position: relative
+      padding-top: 5px
+      padding-bottom: 0
+      padding-left: 0
+      padding-right: 0
+      margin-top: 0
+      margin-bottom: 0
+      margin-right: 0
+      margin-left: 10px
+      box-shadow: unset
+      &__left, &__right
+        float: none
+      & > .nav__item
+        margin: 0
+        padding-top: 11px
+        padding-bottom: 11px
+    &__faciliter
+      &__icon
+        &--open
+          display: inline-block
