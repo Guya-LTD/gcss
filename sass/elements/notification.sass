@@ -78,16 +78,33 @@ $notification-descriptive-border-width: 3px
   &--descriptive
     border-left: $notification-descriptive-border-width $notification-border-style
 
+  &--alert
+    & > .notification__content
+      padding: 0px 24px 
+
   //
   // Themify
+  // Skin Modifiers
+  @include font-family('default')
+  @include color('default')
+  @include border('default')
 
   &--primary
+    @include background('primary')
+    @include color('primary')
 
   &--success
+    @include background('success')
+    @include color('success')
 
   &--warning
+    @include background('warning')
+    @include color('warning')
 
   &--danger
+    @include background('danger')
+    @include color('danger')
+
 
   // Size
   &--sm

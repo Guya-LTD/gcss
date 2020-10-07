@@ -22,8 +22,8 @@ $field-description-margin-horizontal:    0 !default
     color: $color-shark
     & > .field__addon
       color: $color-shark
-      & * svg
-        fill: $color-shark
+      & > svg
+        fill: $color-shark !important
   //
   // ELEMENTS
   //
@@ -72,7 +72,7 @@ $field-description-margin-horizontal:    0 !default
     & > .field__addon
       & > .icon,
       & > svg
-        fill: red
+        // fill: gray
   &--addon-left
     & > .input,
     & > input,

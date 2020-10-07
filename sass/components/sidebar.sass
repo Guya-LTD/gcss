@@ -39,7 +39,8 @@ $sidebar-menu-secondary-items-padding-x:  30px
   color: $text-color-x-light 
   font-size: $font-size-sm
   font-weight: 500
-  padding-left: 0 !important 
+  padding-left: 0 !important
+  background: $color-white-lilac !important
 
   //
   // ELEMENTS
@@ -61,7 +62,9 @@ $sidebar-menu-secondary-items-padding-x:  30px
         padding: 0
       &__logo
         height: $sidebar-menu-primary-logo-height
-        margin: $sidebar-menu-primary-margin
+        //margin: $sidebar-menu-primary-margin
+        margin-top: 62px
+        margin-left: 6px
       &__top
         margin: $sidebar-menu-primary-margin
         text-align: center
@@ -71,14 +74,14 @@ $sidebar-menu-secondary-items-padding-x:  30px
     &__secondary
       width: $sidebar-menu-secondary-width
       margin-top: 3px
-      margin-left: 39px
+      margin-left: 1px 
       & > .list, & > ul
         padding-top: $sidebar-menu-secondary-items-padding-y !important
         padding-bottom: $sidebar-menu-secondary-items-padding-y !important
         padding-left: 13px !important
         color: $text-color-x-light !important
         & svg, i, .icon
-          padding-right: 20px
+          //padding-right: 20px
           color: $text-color-x-light
           fill: $text-color-x-light
       &__items
@@ -109,3 +112,19 @@ $sidebar-menu-secondary-items-padding-x:  30px
   @include font-family('default')
   @include background('default')
   @include border('default')
+
+  &--primary
+    @include background('primary')
+    @include color('primary')
+
+  &--success
+    @include background('success')
+    @include color('success')
+
+  &--warning
+    @include background('warning')
+    @include color('warning')
+
+  &--danger
+    @include background('danger')
+    @include color('danger')
