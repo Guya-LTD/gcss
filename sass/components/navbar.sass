@@ -11,7 +11,7 @@ $navbar-border-width:               $border-width
 // BLOCKS
 //
 .navbar
-  border-bottom: $navbar-border-width solid $navbar-border-color
+  //border-bottom: $navbar-border-width solid $navbar-border-color
   //
   // ELEMENTS
   //
@@ -29,6 +29,7 @@ $navbar-border-width:               $border-width
       display: none
   &__row
     min-height: 52px
+    border-bottom: $navbar-border-width solid $navbar-border-color
     @include background('default')
     @include color('default')
     @include border('default')
