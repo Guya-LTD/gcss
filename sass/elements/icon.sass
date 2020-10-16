@@ -28,7 +28,10 @@ $icon-width-lg:                     35px !default
 //
 .icon
   +icon-normal
-
+  // States
+  :hover
+    & > svg
+      fill: #FF2A2A
   //
   // MODIFIERS
   //
@@ -53,7 +56,7 @@ $icon-width-lg:                     35px !default
     +icon-large
     & > span
       & > svg
-        height: 32px
+        //height: 32px
         width: 32px
 
   &--nav
