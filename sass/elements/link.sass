@@ -38,29 +38,26 @@ $link-font-size-lg:                 $font-size-lg
   border-radius: $link-border-radius
   padding: .3em .6em
   color: $color-neutral-black
-  
   &:hover,
   &.hovered
     //@include color('primary')
-
   //
   // ELEMENTS
   //
-
+  & > span
+    vertical-align: middle
+    margin-right: 16px
   // Icon Element
   &__icon
     margin-top: $link-icon-margin-vertical
     margin-right: $link-icon-margin-horizontal
-
     // Right Modifiers
     &--right
       margin-right: 0
       margin-left: 6px
-
     & > svg
       vertical-align: -.3em//-0.09em
       @include fill('light')
-
   //
   // MODIFIERS
   //
@@ -70,7 +67,19 @@ $link-font-size-lg:                 $font-size-lg
       border-bottom: 4px solid !important
       @include border('default')
       @include color('default')
-
+  &--nav-red
+    border-radius: 6px
+    padding-left: 10px
+    padding-right: 15px
+    padding-top: 10px
+    padding-bottom: 10px
+    & * svg
+      fill: #dc1928
+    &:hover
+      background-color: #dc1928
+      color: #fff !important
+      & * svg
+        fill: #fff
   // Size Modifiers
   &--xs
     font-size: $font-size-xs
