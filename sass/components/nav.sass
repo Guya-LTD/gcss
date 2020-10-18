@@ -35,6 +35,7 @@
 
   &__collapse
     //display: inherit
+    margin: 0
     display: none
     list-style-type: none
     position: fixed //absolute
@@ -61,7 +62,14 @@
       margin-bottom: 10px
       display: list-item !important
       position: relative !important
-      
+    &--single
+      border-bottom-left-radius: 14px
+      border-bottom-right-radius: 14px
+      & > .nav__collapse__left
+        padding-left: 15px
+        padding-right: 17px
+        padding-top: 15px
+        padding-bottom: 10px
   &__faciliter
     &__icon
       &--open, &--close
