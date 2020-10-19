@@ -43,7 +43,6 @@ $sidebar-width:                     25%
       //@include color('default')
       & > svg
         @include fill('default')
-
   &__collapse
     border-radius: 6px 6px 0 0
     position: relative
@@ -94,14 +93,30 @@ $sidebar-width:                     25%
           display: inline-block
         &--close
           display: none
-
   //
   // MODIFIERS
   //
-
   &--nav
     max-width: 230px
     border-radius: 6px 6px 0 0
+  &--infocard
+    &:hover
+      & > .list__collapse
+        background: #f5f5f5
+    & > .list__item
+      padding-left: 0
+      padding-right: 0
+      padding-bottom: 27px !important
+    & > .list__collapse
+      &.active
+        box-shadow: unset !important
+    & > .list__collapse__itmes
+      margin-top: -1px
+      & > li
+        padding: 0 !important
+        font-size: 14px
+        & > span
+
 
   // Skin Modifiers
   @include font-family('default')
