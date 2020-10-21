@@ -3,7 +3,7 @@ $blue: hsl(217, 71%,  53%)
 $link: $blue
 $link-invert: findColorInvert($blue)
 $border-light: hsl(0, 0%, 93%)
-$rtl: true
+$rtl: false
     
 $dropdown-menu-min-width: 12rem !default
 
@@ -50,6 +50,23 @@ $dropdown-divider-background-color: $border-light !default
       padding-bottom: $dropdown-content-offset
       padding-top: initial
       top: auto
+  &.is-artl
+    .dropdown-menu
+      left: 23px
+    .dropdown-content
+      border-radius: 12px
+      box-shadow: 0 10px 60px 0 rgba(0,0,0,.15)
+      padding-bottom: 10px !important
+      margin-bottom: -15px !important
+      padding-top: 0 !important
+    .dropdown-item
+      height: 40px
+      padding: 14px 26px
+      font-size: 11px
+      font-weight: 500
+      & > span
+        width: 22px
+        font-size: 18px
 
 .dropdown-menu
   display: none
@@ -77,7 +94,7 @@ $dropdown-divider-background-color: $border-light !default
 
 a.dropdown-item,
 button.dropdown-item
-  +ltr-property("padding", 3rem)
+  //+ltr-property("padding", 3rem)
   text-align: inherit
   white-space: nowrap
   width: 100%
