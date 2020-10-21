@@ -40,7 +40,7 @@ $link-font-size-lg:                 $font-size-lg
   color: $color-neutral-black
   &:hover,
   &.hovered
-    //@include color('primary')
+    @include hover('default')
   //
   // ELEMENTS
   //
@@ -94,7 +94,7 @@ $link-font-size-lg:                 $font-size-lg
   @include font-family('default')
   @include color('default')
 
-  &--light
+  &--light-gh
     @include color('light')
     &:hover,
     &.hovered
@@ -122,3 +122,8 @@ $link-font-size-lg:                 $font-size-lg
   &--danger
     @include background('danger')
     @include color('danger')
+
+  &--light
+    @include color('light')
+    .link--bg
+      @include background('light')
