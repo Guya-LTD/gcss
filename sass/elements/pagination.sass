@@ -1,0 +1,49 @@
+.pagination
+  display: inline-block
+  a
+    text-decoration: none
+    display: inline-block
+    min-width: 30px
+    height: 30px
+    padding: 0 6px
+    line-height: 28px
+    border: 1px solid transparent
+    font-size: 12px
+    font-weight: 500
+    text-align: center
+    color: #768191
+    &:hover
+      background: #2b50ed
+      border-color: #2b50ed
+      color: #fff
+    &.active
+      background: #fff
+      border-color: #e9ecf0
+      color: #616a75
+  &__control
+    display: inline-block
+    min-width: 30px
+    height: 30px
+    line-height: 28px
+    padding: 0 4px
+    border: 1px solid transparent
+    font-size: 10px
+    text-align: center
+    border-radius: 4px
+  &__pages
+    display: inline-block
+    padding: 0 15px
+  @include font-family('default')
+  @include border('default')
+  &--primary
+    @include background('primary')
+    @include color('primary')
+  &--success
+    @include background('success')
+    @include color('success')
+  &--warning
+    @include background('warning')
+    @include color('warning')
+  &--danger
+    @include background('danger')
+    @include color('danger')
