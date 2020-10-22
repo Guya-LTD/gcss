@@ -1,0 +1,14 @@
+.textarea
+  @extend %input
+  border-color: $color-neutral-gray-13
+  @include font-family('default')
+  @include color('default')
+  @include border('default')
+  &--primary
+    @include color('primary')
+  &--success
+    @include color('success')
+  &--warning
+    @include color('warning')
+  &--danger
+    @include color('danger')
