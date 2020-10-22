@@ -1,0 +1,41 @@
+.table
+  border-spacing: 0.5rem
+  border-collapse: collapse
+  widows: 100%
+  th,
+  td
+    text-align: left
+    //border: 1px solid #ccc
+  th
+    color: #9fa9ba
+    font-size: 11px
+    font-weight: 500
+    padding: 14px 8px
+    text-transform: uppercase
+    text-align: left
+    white-space: nowrap
+    padding: 14px 20px 14px 8px
+  td
+    font-size: 14px
+    padding: 14px 8px
+    color: #768191
+    cursor: pointer
+  tr
+    &:nth-child(2n+1)
+      background: #f8fafc
+    &:nth-child(2n)
+      background: #fff
+  &--hoverable
+    tbody
+      tr:not(.is-selected)
+        &:hover
+          background-color: #f2f5f9
+    &--striped
+      tbody
+        tr:not(.is-selected)
+          &:hover
+            background-color: green
+            &:nth-child(even)
+              background-color: yellow
+  @include font-family('default')
+  @include border('default')
