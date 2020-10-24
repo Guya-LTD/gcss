@@ -26,40 +26,35 @@ $input-border-color:                $skin-default-border-color
   &:focus
     border-color: #3273dc
     box-shadow: 0 0 0 0.125em rgba(50,115,220,.25)
-    
-
   //
   // MODIFIERS
   //
-
   // Size Modifiers
   &--sm
     +input-small
-
   &--lg
     +input-large
-
   // Width Modifier
   &--block
     width: 100% !important
-
+  &--nav
+    width: 100%
+    color: #4c4c4c
+    background: #f5f5f6 !important
+    border-radius: 23px
   @include font-family('default')
   @include background('default')
   @include color('default')
   @include border('default')
-
   &--primary
     @include background('primary')
     @include color('primary')
-
   &--success
     @include background('success')
     @include color('success')
-
   &--warning
     @include background('warning')
     @include color('warning')
-
   &--danger
     @include background('danger')
     @include color('danger')
