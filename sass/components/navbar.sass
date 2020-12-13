@@ -60,7 +60,7 @@ $navbar-border-width:               $border-width
     & * .navbar__collapse,
     & > .navbar__close
       display: block !important
-      z-index: 9999  !important
+      //z-index: 9999  !important
   // Skin Modifiers
   @include font-family('default')
   @include background('default')
@@ -113,6 +113,8 @@ $navbar-border-width:               $border-width
       padding-right: 20px
       background: $color-neutral-white
       border-right: $navbar-border-width solid $navbar-border-color
+      & * a
+        //display: block
       & > * .button,
       & > * button,
       & > * .input,
