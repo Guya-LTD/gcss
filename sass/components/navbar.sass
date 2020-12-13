@@ -41,7 +41,7 @@ $navbar-border-width:               $border-width
     padding-top: 13px
     padding-bottom: 13px
     & * a
-      margin-left: 1rem
+      //margin-left: 1rem
       vertical-align: -webkit-baseline-middle
     & > div,
     & > .row
@@ -82,6 +82,10 @@ $navbar-border-width:               $border-width
   // Media query
   //
   @include screen-sm
+    & > .navbar__row--lg
+      //position: fixed
+      //width: 100%
+      //z-index: 999
     &__open
       display: block
       margin-left: 0
@@ -116,5 +120,14 @@ $navbar-border-width:               $border-width
       & > * .select,
       & > * select
         width: 100%
+      & > div,
+      & > .row
+        & > div
+          & > div
+            & > div
+              margin-top: 10px
+              & > span
+                & > button
+                  margin-top: 10px
     &__brand
       margin-right: 0

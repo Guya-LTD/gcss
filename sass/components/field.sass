@@ -22,7 +22,7 @@ $field-description-margin-horizontal:    0 !default
     color: $color-shark
     & > .field__addon
       color: $color-shark
-      & > svg
+      & * svg
         fill: $color-shark !important
   //
   // ELEMENTS
@@ -45,8 +45,9 @@ $field-description-margin-horizontal:    0 !default
     &--prepend,
     &--append
       color: #dbdbdb
-      & > svg
+      & * svg
         color: #dbdbdb
+        fill: #dbdbdb !important
     &--prepend
     &--append
       //right: 2%
@@ -59,6 +60,7 @@ $field-description-margin-horizontal:    0 !default
     display: block
     font-size: .75rem
     margin-top: .25rem
+    text-align: left
     //margin: $field-description-margin-vertical $field-description-margin-horizontal
     //font-size: $field-description-font-size
     color: $field-description-color

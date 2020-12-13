@@ -1,5 +1,5 @@
 // Notification ELEMENT
-
+    
 //
 // VARIABLES
 //
@@ -45,24 +45,19 @@ $notification-descriptive-border-width: 3px
   border-style: $notification-border-style
   border-radius: $notification-border-radius
   display: flex
-
   //
   // ELEMENTS
   //
-
   &__content
     padding: $notification-content-padding-y $notification-content-padding-x
-    
     &__title
       font-size: $notification-content-title-font-size
       font-weight: $notification-content-title-font-weight
       line-height: $notification-content-title-line-height
       letter-spacing: $notification-content-title-letter-spacing
       margin-bottom: $notification-content-title-margin-y
-
     &__message
       color: $notification-content-message-color
-  
   &__close
     align-items: center
     display: flex
@@ -70,42 +65,32 @@ $notification-descriptive-border-width: 3px
     justify-content: center
     height: $notification-close-height
     widht: $notification-close-width
-
   //
   // MODIFIERS
   //
-
   &--descriptive
     border-left: $notification-descriptive-border-width $notification-border-style
-
   &--alert
     & > .notification__content
       padding: 0px 24px 
-
   //
   // Themify
   // Skin Modifiers
   @include font-family('default')
   @include color('default')
   @include border('default')
-
   &--primary
     @include background('primary')
     @include color('primary')
-
   &--success
     @include background('success')
     @include color('success')
-
   &--warning
     @include background('warning')
     @include color('warning')
-
   &--danger
     @include background('danger')
     @include color('danger')
-
-
   // Size
   &--sm
     +notification-small
@@ -114,6 +99,8 @@ $notification-descriptive-border-width: 3px
   // Modifiers
   &--bottom-border
     border-top: 0
+    border-left-width: 0
+    border-right-width: 0
     & > .notification__content
       padding-top: 0 !important
       padding-bottom: 0 !important
